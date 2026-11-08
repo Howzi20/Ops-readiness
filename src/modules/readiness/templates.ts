@@ -31,7 +31,8 @@ export async function createSiteFromTemplate(db: PrismaClient, input: NewSiteInp
       await renumberWorkstreams(tx, site.id);
     }
     return site;
-  });
+    // copying a full template (~600 tasks) can take a few seconds on a slow first run
+  }, { timeout: 60_000, maxWait: 10_000 });
 }
 
 async function copyTemplateInto(tx: Tx, templateId: string, siteId: string) {
