@@ -22,14 +22,24 @@ export function Popover({
   const ref = useRef<HTMLDivElement>(null);
   const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
 
+  // place the menu under (or above) its button, and keep it there while the page scrolls
   useLayoutEffect(() => {
     if (!anchor) return;
-    const r = anchor.getBoundingClientRect();
-    const left = Math.min(Math.max(8, r.left + r.width / 2 - width / 2), window.innerWidth - width - 8);
-    const below = r.bottom + 6;
-    const h = ref.current?.offsetHeight ?? 200;
-    const top = below + h > window.innerHeight - 8 ? Math.max(8, r.top - h - 6) : below;
-    setPos({ top, left });
+    const place = () => {
+      const r = anchor.getBoundingClientRect();
+      const left = Math.min(Math.max(8, r.left + r.width / 2 - width / 2), window.innerWidth - width - 8);
+      const below = r.bottom + 6;
+      const h = ref.current?.offsetHeight ?? 200;
+      const top = below + h > window.innerHeight - 8 ? Math.max(8, r.top - h - 6) : below;
+      setPos({ top, left });
+    };
+    place();
+    window.addEventListener("scroll", place, true);
+    window.addEventListener("resize", place);
+    return () => {
+      window.removeEventListener("scroll", place, true);
+      window.removeEventListener("resize", place);
+    };
   }, [anchor, width]);
 
   useEffect(() => {
@@ -38,14 +48,11 @@ export function Popover({
       onClose();
     };
     const key = (e: KeyboardEvent) => e.key === "Escape" && onClose();
-    const scroll = (e: Event) => !ref.current?.contains(e.target as Node) && onClose();
     document.addEventListener("mousedown", down);
     document.addEventListener("keydown", key);
-    window.addEventListener("scroll", scroll, true);
     return () => {
       document.removeEventListener("mousedown", down);
       document.removeEventListener("keydown", key);
-      window.removeEventListener("scroll", scroll, true);
     };
   }, [anchor, onClose]);
 

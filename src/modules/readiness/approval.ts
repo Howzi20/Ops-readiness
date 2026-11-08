@@ -30,16 +30,16 @@ function layout(title: string, intro: string, t: LoadedTask, button?: { href: st
   if (t.updates[0]) rows.push(["Latest update", `${t.updates[0].authorName}: ${t.updates[0].body}`]);
   const html = `<!doctype html><html><body style="margin:0;background:#f4f6f9;font-family:-apple-system,Segoe UI,Arial,sans-serif;color:#1f2a37">
 <table width="100%" cellpadding="0" cellspacing="0" style="padding:24px 12px"><tr><td align="center">
-<table width="560" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border:1px solid #e2e7ee;border-radius:8px">
+<table width="560" cellpadding="0" cellspacing="0" style="width:100%;max-width:560px;background:#ffffff;border:1px solid #e2e7ee;border-radius:8px">
 <tr><td style="padding:20px 24px;border-bottom:1px solid #e2e7ee;font-weight:600;font-size:16px">Operations Readiness</td></tr>
 <tr><td style="padding:20px 24px">
 <h1 style="margin:0 0 8px;font-size:18px">${esc(title)}</h1>
 <p style="margin:0 0 16px;font-size:14px;line-height:1.5">${esc(intro)}</p>
 <table cellpadding="0" cellspacing="0" style="width:100%;font-size:14px;border-collapse:collapse">
-${rows.map(([k, v]) => `<tr><td style="padding:6px 12px 6px 0;color:#6b7a8c;vertical-align:top;white-space:nowrap">${esc(k)}</td><td style="padding:6px 0;white-space:pre-line">${esc(v)}</td></tr>`).join("")}
+${rows.map(([k, v]) => `<tr><td width="110" style="width:110px;padding:6px 12px 6px 0;color:#6b7a8c;vertical-align:top;white-space:nowrap">${esc(k)}</td><td style="padding:6px 0;white-space:pre-line">${esc(v)}</td></tr>`).join("")}
 </table>
 ${button ? `<p style="margin:24px 0 8px"><a href="${esc(button.href)}" style="display:inline-block;background:#0e7c86;color:#ffffff;text-decoration:none;padding:10px 18px;border-radius:6px;font-weight:600;font-size:14px">${esc(button.label)}</a></p>
-<p style="margin:0;font-size:12px;color:#6b7a8c">Or open this link: ${esc(button.href)}</p>` : ""}
+<p style="margin:0;font-size:12px;color:#6b7a8c;word-break:break-all">Or open this link: ${esc(button.href)}</p>` : ""}
 </td></tr></table></td></tr></table></body></html>`;
   const text = [title, "", intro, "", ...rows.map(([k, v]) => `${k}: ${v}`), ...(button ? ["", `${button.label}: ${button.href}`] : [])].join("\n");
   return { html, text };
