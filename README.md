@@ -38,7 +38,7 @@ The database is a single local file (`prisma/dev.db`, not committed). Delete it 
 - **Workstream boards** with four views of the same tasks:
   - **Table**: collapsible colour-coded groups, colour-filled status and priority cells you click to change, avatar
     pickers for RACI, a progress slider, an automatic flag, and a summary row per group.
-  - **Kanban**: cards in status columns. Drag a card to change its status.
+  - **Bucket**: cards in status buckets. Drag a card to another bucket to change its status.
   - **Timeline**: a Gantt chart with bars from start date to target date, plus Today, PC and Go-Live lines.
   - **Calendar**: tasks on their target dates, month by month.
 - **Task panel**: an **Updates** thread of dated comments, plus a details tab for dates, phase, RACI, progress,

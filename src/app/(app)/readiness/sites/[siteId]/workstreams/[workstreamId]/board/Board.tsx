@@ -9,7 +9,7 @@ import { PHASES, PHASE_LABEL, STATUSES, STATUS_LABEL, type Flag } from "@/module
 import { btn, cx, field } from "@/components/ui";
 import type { Contact } from "./cells";
 import { TableView } from "./TableView";
-import { KanbanView } from "./KanbanView";
+import { BucketView } from "./BucketView";
 import { TimelineView } from "./TimelineView";
 import { CalendarView } from "./CalendarView";
 import { TaskPanel } from "./TaskPanel";
@@ -42,7 +42,7 @@ export type BoardApi = {
 
 const VIEWS = [
   ["table", "Table", "▦"],
-  ["kanban", "Kanban", "▥"],
+  ["bucket", "Bucket", "▥"],
   ["timeline", "Timeline", "▬"],
   ["calendar", "Calendar", "▣"],
 ] as const;
@@ -177,7 +177,7 @@ export function Board({
       )}
 
       {view === "table" && <TableView api={api} />}
-      {view === "kanban" && <KanbanView api={api} />}
+      {view === "bucket" && <BucketView api={api} />}
       {view === "timeline" && <TimelineView api={api} />}
       {view === "calendar" && <CalendarView api={api} />}
 

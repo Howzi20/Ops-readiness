@@ -8,7 +8,7 @@ import { cx, FlagDot } from "@/components/ui";
 import { AvatarStack } from "./cells";
 import { flagOf, groupBySection, type BoardApi } from "./Board";
 
-export function KanbanView({ api }: { api: BoardApi }) {
+export function BucketView({ api }: { api: BoardApi }) {
   const [dragId, setDragId] = useState<string | null>(null);
   const [over, setOver] = useState<Status | null>(null);
   const [showDone, setShowDone] = useState(true);

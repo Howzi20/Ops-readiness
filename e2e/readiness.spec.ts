@@ -65,7 +65,7 @@ test("(log in if required,) create a site, work a task across views, see it on t
   await expect(second.getByRole("button", { name: "status" })).toHaveText("Completed");
 
   // other views render the same tasks
-  await page.getByRole("tab", { name: /Kanban/ }).click();
+  await page.getByRole("tab", { name: /Bucket/ }).click();
   await expect(page.getByText("Drop tasks here").or(page.locator("[draggable=true]")).first()).toBeVisible();
   await page.getByRole("tab", { name: /Timeline/ }).click();
   await expect(page.getByRole("button", { name: "Jump to today" })).toBeVisible();
