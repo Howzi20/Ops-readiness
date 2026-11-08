@@ -26,7 +26,10 @@ export async function createSiteFromTemplate(db: PrismaClient, input: NewSiteInp
         goLiveDate: input.goLiveDate ?? null,
       },
     });
-    if (input.templateId) await copyTemplateInto(tx, input.templateId, site.id);
+    if (input.templateId) {
+      await copyTemplateInto(tx, input.templateId, site.id);
+      await renumberWorkstreams(tx, site.id);
+    }
     return site;
   });
 }
@@ -117,4 +120,16 @@ export async function duplicateTemplate(db: PrismaClient, templateId: string, na
       },
     },
   });
+}
+
+/** Number a site's workstreams 1, 2, 3… in their current order (no gaps, letters or duplicates). */
+export async function renumberWorkstreams(db: Tx, siteId: string) {
+  const list = await db.workstream.findMany({ where: { siteId }, orderBy: [{ sortOrder: "asc" }, { code: "asc" }], select: { id: true } });
+  for (const [i, w] of list.entries()) await db.workstream.update({ where: { id: w.id }, data: { sortOrder: i, code: String(i + 1) } });
+}
+
+/** Same as renumberWorkstreams, for a template. */
+export async function renumberTemplateWorkstreams(db: Tx, templateId: string) {
+  const list = await db.templateWorkstream.findMany({ where: { templateId }, orderBy: [{ sortOrder: "asc" }, { code: "asc" }], select: { id: true } });
+  for (const [i, w] of list.entries()) await db.templateWorkstream.update({ where: { id: w.id }, data: { sortOrder: i, code: String(i + 1) } });
 }

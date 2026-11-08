@@ -75,7 +75,6 @@ export function TemplateEditor({
             </Link>
           ))}
           <form ref={wsForm} action={wsAction} className="mt-2 flex gap-1 border-t border-line p-2">
-            <input name="code" placeholder="#" className={field + " w-12"} />
             <input name="name" placeholder="New workstream" className={input} />
             <button className={btn.secondary}>+</button>
           </form>

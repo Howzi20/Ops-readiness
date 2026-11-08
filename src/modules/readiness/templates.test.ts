@@ -2,7 +2,7 @@ import { execSync } from "node:child_process";
 import { rmSync } from "node:fs";
 import { PrismaClient } from "@prisma/client";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { createSiteFromTemplate, saveSiteAsTemplate } from "./templates";
+import { createSiteFromTemplate, renumberWorkstreams, saveSiteAsTemplate } from "./templates";
 
 const url = "file:./test-templates.db";
 let db: PrismaClient;
@@ -61,6 +61,22 @@ describe("template copying", () => {
     const t2 = await saveSiteAsTemplate(db, site.id, "T2");
     const t2Tasks = await db.templateTask.findMany({ where: { workstream: { templateId: t2.id } } });
     expect(t2Tasks.map((t) => t.title).sort()).toEqual(["Task A (lessons learnt)", "Task B"]);
+  });
+
+  it("numbers workstreams 1, 2, 3… with no letters, gaps or duplicates", async () => {
+    const site = await createSiteFromTemplate(db, { name: "Numbers", templateId: null });
+    for (const [i, code] of ["1", "1A", "2", "7A", "14"].entries()) {
+      await db.workstream.create({ data: { siteId: site.id, code, name: `WS ${code}`, sortOrder: i } });
+    }
+    await renumberWorkstreams(db, site.id);
+    const list = await db.workstream.findMany({ where: { siteId: site.id }, orderBy: { sortOrder: "asc" } });
+    expect(list.map((w) => [w.code, w.name])).toEqual([
+      ["1", "WS 1"],
+      ["2", "WS 1A"],
+      ["3", "WS 2"],
+      ["4", "WS 7A"],
+      ["5", "WS 14"],
+    ]);
   });
 
   it("creates an empty site when no template is chosen", async () => {

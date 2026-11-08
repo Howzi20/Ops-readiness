@@ -7,7 +7,7 @@ import { requireUser } from "@/lib/auth";
 import { parseDateInput } from "@/lib/dates";
 import { DOCUMENTED, FLAGS, ORGANISATIONS, PHASES, RISK_LEVELS, RISK_STATUSES, STATUSES } from "./constants";
 import { applySignOff, normaliseTaskUpdate } from "./rules";
-import { createSiteFromTemplate, duplicateTemplate, saveSiteAsTemplate } from "./templates";
+import { createSiteFromTemplate, duplicateTemplate, renumberTemplateWorkstreams, renumberWorkstreams, saveSiteAsTemplate } from "./templates";
 
 export type ActionResult = { ok: true } | { ok: false; error: string };
 
@@ -235,8 +235,9 @@ export async function addWorkstream(siteId: string, _prev: ActionResult | undefi
   if (!name) return { ok: false, error: "Workstream name is required" };
   const max = await db.workstream.aggregate({ where: { siteId }, _max: { sortOrder: true } });
   await db.workstream.create({
-    data: { siteId, name, code: str(form, "code") || "—", sortOrder: (max._max.sortOrder ?? -1) + 1 },
+    data: { siteId, name, code: "", sortOrder: (max._max.sortOrder ?? -1) + 1 },
   });
+  await renumberWorkstreams(db, siteId);
   revalidatePath(sitePath(siteId), "layout");
   return { ok: true };
 }
@@ -255,6 +256,7 @@ export async function setWorkstreamOwner(workstreamId: string, ownerId: string |
 export async function deleteWorkstream(workstreamId: string) {
   await requireUser();
   const ws = await db.workstream.delete({ where: { id: workstreamId } });
+  await renumberWorkstreams(db, ws.siteId);
   revalidatePath(sitePath(ws.siteId), "layout");
   redirect(`${sitePath(ws.siteId)}/workstreams`);
 }
@@ -414,7 +416,8 @@ export async function addTemplateWorkstream(templateId: string, _prev: ActionRes
   const name = str(form, "name");
   if (!name) return { ok: false, error: "Workstream name is required" };
   const max = await db.templateWorkstream.aggregate({ where: { templateId }, _max: { sortOrder: true } });
-  await db.templateWorkstream.create({ data: { templateId, name, code: str(form, "code") || "—", sortOrder: (max._max.sortOrder ?? -1) + 1 } });
+  await db.templateWorkstream.create({ data: { templateId, name, code: "", sortOrder: (max._max.sortOrder ?? -1) + 1 } });
+  await renumberTemplateWorkstreams(db, templateId);
   revalidatePath(`/readiness/templates/${templateId}`);
   return { ok: true };
 }
@@ -422,6 +425,7 @@ export async function addTemplateWorkstream(templateId: string, _prev: ActionRes
 export async function deleteTemplateWorkstream(templateId: string, id: string) {
   await requireUser();
   await db.templateWorkstream.delete({ where: { id } });
+  await renumberTemplateWorkstreams(db, templateId);
   revalidatePath(`/readiness/templates/${templateId}`);
 }
 

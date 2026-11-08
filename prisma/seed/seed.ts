@@ -5,7 +5,7 @@
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
 import template from "./template-new-build.json";
-import { createSiteFromTemplate } from "../../src/modules/readiness/templates";
+import { createSiteFromTemplate, renumberTemplateWorkstreams, renumberWorkstreams } from "../../src/modules/readiness/templates";
 
 const db = new PrismaClient();
 
@@ -27,7 +27,7 @@ async function seedTemplate(t: TemplateJson) {
       description: t.description,
       workstreams: {
         create: t.workstreams.map((ws, i) => ({
-          code: ws.code,
+          code: String(i + 1),
           name: ws.name,
           sortOrder: i,
           tasks: { create: ws.tasks.map((task, j) => ({ ...task, sortOrder: j })) },
@@ -71,13 +71,27 @@ async function seedDemoSite(templateId: string) {
   for (const p of people) contacts.push(await db.contact.create({ data: { ...p, siteId: site.id, email: `${p.initials.toLowerCase()}@example.com` } }));
   const byInit = Object.fromEntries(contacts.map((c) => [c.initials, c.id]));
 
-  const owners: Record<string, string> = { "1": "SL", "1A": "PS", "2": "AM", "3": "PS", "4": "JB", "4A": "JB", "5": "CT", "6": "PS", "7": "AM", "7A": "CT", "8": "PS", "9": "AM", "14": "SL" };
+  const owners: Record<string, string> = {
+    Onboarding: "SL",
+    "Tenant Onboarding": "PS",
+    Transition: "AM",
+    "Human Resources": "PS",
+    "Operational Technology": "JB",
+    "Information Technology": "JB",
+    Finance: "CT",
+    "Lease Administration": "PS",
+    Engineering: "AM",
+    "Shared Services": "CT",
+    "Customer Experience": "PS",
+    "Energy & Sustainability": "AM",
+    "Post Transition": "SL",
+  };
   const streams = await db.workstream.findMany({ where: { siteId: site.id }, include: { tasks: { orderBy: { sortOrder: "asc" } } } });
 
   // Give the demo a realistic spread of progress so the dashboard and flags have something to show.
   let n = 0;
   for (const ws of streams) {
-    const owner = byInit[owners[ws.code]];
+    const owner = byInit[owners[ws.name]];
     await db.workstream.update({ where: { id: ws.id }, data: { ownerId: owner } });
     for (const t of ws.tasks) {
       n++;
@@ -153,6 +167,9 @@ async function main() {
   }
   const tpl = await seedTemplate(template as TemplateJson);
   await seedDemoSite(tpl.id);
+  // keep workstream numbers sequential (1, 2, 3…) in existing databases too
+  for (const t of await db.template.findMany({ select: { id: true } })) await renumberTemplateWorkstreams(db, t.id);
+  for (const s of await db.site.findMany({ select: { id: true } })) await renumberWorkstreams(db, s.id);
   console.log("Seed complete.");
 }
 

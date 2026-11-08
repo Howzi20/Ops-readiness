@@ -261,7 +261,7 @@
    ]
   },
   {
-   "code": "1A",
+   "code": "2",
    "name": "Tenant Onboarding",
    "tasks": [
     {
@@ -405,7 +405,7 @@
    ]
   },
   {
-   "code": "2",
+   "code": "3",
    "name": "Transition",
    "tasks": [
     {
@@ -1209,7 +1209,7 @@
    ]
   },
   {
-   "code": "3",
+   "code": "4",
    "name": "Human Resources",
    "tasks": [
     {
@@ -1335,7 +1335,7 @@
    ]
   },
   {
-   "code": "4",
+   "code": "5",
    "name": "Operational Technology",
    "tasks": [
     {
@@ -1647,7 +1647,7 @@
    ]
   },
   {
-   "code": "4A",
+   "code": "6",
    "name": "Information Technology",
    "tasks": [
     {
@@ -1869,7 +1869,7 @@
    ]
   },
   {
-   "code": "5",
+   "code": "7",
    "name": "Finance",
    "tasks": [
     {
@@ -2241,7 +2241,7 @@
    ]
   },
   {
-   "code": "6",
+   "code": "8",
    "name": "Lease Administration",
    "tasks": [
     {
@@ -2565,7 +2565,7 @@
    ]
   },
   {
-   "code": "7",
+   "code": "9",
    "name": "Engineering",
    "tasks": [
     {
@@ -2817,7 +2817,7 @@
    ]
   },
   {
-   "code": "7A",
+   "code": "10",
    "name": "Shared Services",
    "tasks": [
     {
@@ -2865,7 +2865,7 @@
    ]
   },
   {
-   "code": "8",
+   "code": "11",
    "name": "Customer Experience",
    "tasks": [
     {
@@ -3093,7 +3093,7 @@
    ]
   },
   {
-   "code": "9",
+   "code": "12",
    "name": "Energy & Sustainability",
    "tasks": [
     {
@@ -3261,7 +3261,7 @@
    ]
   },
   {
-   "code": "14",
+   "code": "13",
    "name": "Post Transition",
    "tasks": [
     {

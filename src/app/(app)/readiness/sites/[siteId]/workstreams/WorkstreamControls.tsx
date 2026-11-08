@@ -33,7 +33,6 @@ export function AddWorkstreamForm({ siteId }: { siteId: string }) {
   useEffect(() => { if (state?.ok) ref.current?.reset(); }, [state]);
   return (
     <form ref={ref} action={action} className="flex flex-wrap items-center gap-2">
-      <input name="code" placeholder="#" className={field + " w-16"} />
       <input name="name" placeholder="New workstream name" className={field + " w-72"} />
       <button className={btn.secondary} disabled={pending}>+ Add workstream</button>
       {state && !state.ok && <span className="text-sm text-rag-red">{state.error}</span>}

@@ -84,11 +84,11 @@ def main(src, out):
     ANONYMISE.extend(load_rules())
     wb = openpyxl.load_workbook(src, data_only=True)
     streams = []
-    for prefix, code, name, phase in TABS:
+    for i, (prefix, _code, name, phase) in enumerate(TABS):
         ws = next(w for w in wb.worksheets if w.title.startswith(prefix))
         tasks = [dict(t, phase=phase) for t in extract(ws)]
-        streams.append({"code": code, "name": name, "tasks": tasks})
-        print(f"{code:>3} {name:<26} {len(tasks):>4} tasks", file=sys.stderr)
+        streams.append({"code": str(i + 1), "name": name, "tasks": tasks})
+        print(f"{i + 1:>3} {name:<26} {len(tasks):>4} tasks", file=sys.stderr)
     json.dump({"name": "New build (standard)",
                "description": "Construction / blank canvas to operational readiness: onboarding, transition, people, technology, finance, leasing, engineering, customer experience, sustainability and post-PC.",
                "workstreams": streams}, open(out, "w"), indent=1, ensure_ascii=False)
