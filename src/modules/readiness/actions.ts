@@ -242,10 +242,19 @@ export async function addWorkstream(siteId: string, _prev: ActionResult | undefi
   return { ok: true };
 }
 
-export async function setWorkstreamOwner(workstreamId: string, ownerId: string | null): Promise<ActionResult> {
+export async function setWorkstreamPerson(
+  workstreamId: string,
+  role: "ownerId" | "approverId",
+  contactId: string | null,
+): Promise<ActionResult> {
   try {
     await requireUser();
-    const ws = await db.workstream.update({ where: { id: workstreamId }, data: { ownerId: ownerId || null } });
+    if (role !== "ownerId" && role !== "approverId") throw new Error("Unknown role");
+    const current = await db.workstream.findUniqueOrThrow({ where: { id: workstreamId } });
+    if (contactId && !(await db.contact.findFirst({ where: { id: contactId, siteId: current.siteId } }))) {
+      throw new Error("Unknown contact");
+    }
+    const ws = await db.workstream.update({ where: { id: workstreamId }, data: { [role]: contactId || null } });
     revalidatePath(sitePath(ws.siteId), "layout");
     return { ok: true };
   } catch (e) {

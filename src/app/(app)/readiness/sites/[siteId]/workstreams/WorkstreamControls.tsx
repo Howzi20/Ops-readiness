@@ -1,13 +1,25 @@
 "use client";
 import { useActionState, useEffect, useRef, useState, useTransition } from "react";
-import { addWorkstream, setWorkstreamOwner } from "@/modules/readiness/actions";
+import { addWorkstream, setWorkstreamPerson } from "@/modules/readiness/actions";
 import { btn, field, input } from "@/components/ui";
 
-export function OwnerSelect({ workstreamId, value, options }: { workstreamId: string; value: string; options: { id: string; label: string }[] }) {
+export function PersonSelect({
+  workstreamId,
+  role,
+  value,
+  options,
+}: {
+  workstreamId: string;
+  role: "ownerId" | "approverId";
+  value: string;
+  options: { id: string; label: string }[];
+}) {
   const [v, setV] = useState(value);
+  useEffect(() => setV(value), [value]);
   const [pending, start] = useTransition();
   return (
     <select
+      aria-label={role === "ownerId" ? "Workstream owner" : "Workstream approver"}
       className={input + " py-1"}
       value={v}
       disabled={pending}
@@ -16,12 +28,12 @@ export function OwnerSelect({ workstreamId, value, options }: { workstreamId: st
         const prev = v;
         setV(next);
         start(async () => {
-          const r = await setWorkstreamOwner(workstreamId, next || null);
+          const r = await setWorkstreamPerson(workstreamId, role, next || null);
           if (!r.ok) setV(prev);
         });
       }}
     >
-      <option value="">— No owner —</option>
+      <option value="">{role === "ownerId" ? "— No owner —" : "— No approver —"}</option>
       {options.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
     </select>
   );

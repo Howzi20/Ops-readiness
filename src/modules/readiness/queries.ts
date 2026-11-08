@@ -40,7 +40,11 @@ export async function getSiteDashboard(siteId: string) {
   const workstreams = await db.workstream.findMany({
     where: { siteId },
     orderBy: { sortOrder: "asc" },
-    include: { owner: { select: { name: true, initials: true } }, tasks: { select: { ...flagFields, phase: true } } },
+    include: {
+      owner: { select: { id: true, name: true, initials: true } },
+      approver: { select: { id: true, name: true, initials: true } },
+      tasks: { select: { ...flagFields, phase: true } },
+    },
   });
   const all = workstreams.flatMap((w) => w.tasks);
   const streams = workstreams.map((w) => ({
@@ -48,6 +52,7 @@ export async function getSiteDashboard(siteId: string) {
     code: w.code,
     name: w.name,
     owner: w.owner,
+    approver: w.approver,
     ...workstreamSummary(w.tasks, today),
   }));
   const overall = workstreamSummary(all, today);
@@ -146,6 +151,7 @@ export async function getWorkstream(siteId: string, workstreamId: string) {
     where: { id: workstreamId, siteId },
     include: {
       owner: true,
+      approver: true,
       tasks: {
         orderBy: { sortOrder: "asc" },
         include: {
@@ -202,4 +208,13 @@ export async function getFlags(siteId: string) {
       if (a.flag !== b.flag) return a.flag === "RED" ? -1 : 1;
       return (a.targetDate?.getTime() ?? Infinity) - (b.targetDate?.getTime() ?? Infinity);
     });
+}
+
+/** Workstreams with their owner/approver, for the Contacts allocation table. */
+export async function getAllocation(siteId: string) {
+  return db.workstream.findMany({
+    where: { siteId },
+    orderBy: { sortOrder: "asc" },
+    select: { id: true, code: true, name: true, ownerId: true, approverId: true },
+  });
 }

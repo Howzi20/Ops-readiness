@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getContacts, getSiteDashboard } from "@/modules/readiness/queries";
 import { Card, Empty, ProgressBar, pct } from "@/components/ui";
-import { AddWorkstreamForm, OwnerSelect } from "./WorkstreamControls";
+import { AddWorkstreamForm, PersonSelect } from "./WorkstreamControls";
 
 export const metadata = { title: "Workstreams" };
 
@@ -22,6 +22,7 @@ export default async function WorkstreamsPage({ params }: { params: Promise<{ si
                 <th className="px-4 py-2.5 font-medium">#</th>
                 <th className="px-4 py-2.5 font-medium">Workstream</th>
                 <th className="px-4 py-2.5 font-medium">Owner</th>
+                <th className="px-4 py-2.5 font-medium">Approver</th>
                 <th className="w-48 px-4 py-2.5 font-medium">Completion</th>
                 <th className="px-4 py-2.5 text-center font-medium">Red</th>
                 <th className="px-4 py-2.5 text-center font-medium">Yellow</th>
@@ -37,7 +38,10 @@ export default async function WorkstreamsPage({ params }: { params: Promise<{ si
                     {w.atRisk && <span className="ml-2 rounded bg-rag-red-soft px-1.5 py-0.5 text-xs font-medium text-rag-red">At risk</span>}
                   </td>
                   <td className="px-4 py-2">
-                    <OwnerSelect workstreamId={w.id} value={contacts.find((c) => c.name === w.owner?.name)?.id ?? ""} options={options} />
+                    <PersonSelect workstreamId={w.id} role="ownerId" value={w.owner?.id ?? ""} options={options} />
+                  </td>
+                  <td className="px-4 py-2">
+                    <PersonSelect workstreamId={w.id} role="approverId" value={w.approver?.id ?? ""} options={options} />
                   </td>
                   <td className="px-4 py-2.5">
                     <div className="flex items-center gap-2">

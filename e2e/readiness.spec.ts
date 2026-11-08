@@ -49,8 +49,14 @@ test("(log in if required,) create a site, work a task across views, see it on t
   await page.locator("input[name=initials]").fill("PC");
   await page.getByRole("button", { name: "Save contact" }).click();
   await expect(page.getByRole("cell", { name: "Pat Client" })).toBeVisible();
+
+  // allocate Pat as approver of the Onboarding workstream from the Contacts tab
+  const onboardingRow = page.locator("tr", { has: page.getByRole("cell", { name: "Onboarding", exact: true }) });
+  await onboardingRow.getByLabel("Workstream approver").selectOption({ label: "PC — Pat Client" });
+  await expect(page.getByText("Approver: 1")).toBeVisible();
   await page.getByRole("link", { name: "Workstreams" }).click();
   await page.getByRole("link", { name: "Onboarding", exact: true }).click();
+  await expect(page.getByText(/Approver:\s*Pat Client/)).toBeVisible();
   const second = page.locator("table").first().locator("tbody tr").nth(1);
   await second.getByRole("button", { name: "Approver", exact: true }).click();
   await page.getByRole("menuitem", { name: /Pat Client/ }).click();

@@ -76,7 +76,12 @@ export default async function SiteDashboard({ params }: { params: Promise<{ site
                     <div className="min-w-0">
                       <div className="text-xs text-muted tabular">{w.code}</div>
                       <div className="truncate font-medium text-ink">{w.name}</div>
-                      <div className="truncate text-xs text-muted">{w.owner ? w.owner.name : "No owner"}</div>
+                      <div className="truncate text-xs text-muted" title="Owner">
+                        <span className="text-muted/70">Owner</span> {w.owner ? w.owner.name : "—"}
+                      </div>
+                      <div className="truncate text-xs text-muted" title="Approver">
+                        <span className="text-muted/70">Approver</span> {w.approver ? w.approver.name : "—"}
+                      </div>
                     </div>
                     <div className="text-xl font-semibold text-ink tabular">{pct(w.completion)}</div>
                   </div>

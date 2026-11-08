@@ -17,7 +17,11 @@ export default async function WorkstreamPage({ params }: { params: Promise<{ sit
           <h2 className="text-xl font-semibold text-ink">
             <span className="mr-2 text-muted tabular">{ws.code}</span>{ws.name}
           </h2>
-          <div className="text-sm text-muted">Owner: {ws.owner?.name ?? "not set"}</div>
+          <div className="text-sm text-muted">
+            Owner: <span className="text-ink-soft">{ws.owner?.name ?? "not set"}</span>
+            <span className="mx-2">·</span>
+            Approver: <span className="text-ink-soft">{ws.approver?.name ?? "not set"}</span>
+          </div>
         </div>
         <div className="flex items-center gap-6">
           <div className="w-56">

@@ -3,10 +3,12 @@ import { useActionState, useEffect, useState } from "react";
 import { deleteContact, saveContact } from "@/modules/readiness/actions";
 import { ORGANISATIONS, ORG_LABEL } from "@/modules/readiness/constants";
 import { btn, Card, Empty, input, label } from "@/components/ui";
+import { PersonSelect } from "../workstreams/WorkstreamControls";
 
 type Contact = { id: string; name: string; organisation: string; role: string; initials: string; phone: string; email: string; leaveNotes: string };
+type Allocation = { id: string; code: string; name: string; ownerId: string | null; approverId: string | null }[];
 
-export function ContactList({ siteId, contacts }: { siteId: string; contacts: Contact[] }) {
+export function ContactList({ siteId, contacts, allocation }: { siteId: string; contacts: Contact[]; allocation: Allocation }) {
   const [editing, setEditing] = useState<string | "new" | null>(null);
   const current = editing && editing !== "new" ? contacts.find((c) => c.id === editing) ?? null : null;
   return (
@@ -16,6 +18,7 @@ export function ContactList({ siteId, contacts }: { siteId: string; contacts: Co
         <button className={btn.primary} onClick={() => setEditing("new")}>+ Add contact</button>
       </div>
       {contacts.length === 0 && <Empty>No contacts yet.</Empty>}
+      {contacts.length > 0 && <AllocationTable allocation={allocation} contacts={contacts} />}
       {ORGANISATIONS.map((org) => {
         const list = contacts.filter((c) => c.organisation === org);
         if (!list.length) return null;
@@ -31,6 +34,7 @@ export function ContactList({ siteId, contacts }: { siteId: string; contacts: Co
                     <th className="px-4 py-2.5 font-medium">Role</th>
                     <th className="px-4 py-2.5 font-medium">Phone</th>
                     <th className="px-4 py-2.5 font-medium">Email</th>
+                    <th className="px-4 py-2.5 font-medium">Workstreams</th>
                     <th className="px-4 py-2.5 font-medium">Leave</th>
                   </tr>
                 </thead>
@@ -42,6 +46,9 @@ export function ContactList({ siteId, contacts }: { siteId: string; contacts: Co
                       <td className="px-4 py-2.5">{c.role}</td>
                       <td className="px-4 py-2.5 tabular">{c.phone}</td>
                       <td className="px-4 py-2.5">{c.email}</td>
+                      <td className="px-4 py-2.5 text-xs">
+                        <Allocated allocation={allocation} contactId={c.id} />
+                      </td>
                       <td className="px-4 py-2.5 text-muted">{c.leaveNotes}</td>
                     </tr>
                   ))}
@@ -104,5 +111,65 @@ function ContactForm({ siteId, contact, onClose }: { siteId: string; contact: Co
         </form>
       </aside>
     </div>
+  );
+}
+
+/** "Owner: 3, 9 · Approver: 13" for one contact. */
+function Allocated({ allocation, contactId }: { allocation: Allocation; contactId: string }) {
+  const owns = allocation.filter((w) => w.ownerId === contactId);
+  const approves = allocation.filter((w) => w.approverId === contactId);
+  if (!owns.length && !approves.length) return <span className="text-muted">—</span>;
+  const list = (ws: Allocation) => (
+    <span className="tabular" title={ws.map((w) => `${w.code} ${w.name}`).join("\n")}>
+      {ws.map((w) => w.code).join(", ")}
+    </span>
+  );
+  return (
+    <span className="text-ink-soft">
+      {owns.length > 0 && <>Owner: {list(owns)}</>}
+      {owns.length > 0 && approves.length > 0 && <span className="mx-1.5 text-muted">·</span>}
+      {approves.length > 0 && <>Approver: {list(approves)}</>}
+    </span>
+  );
+}
+
+/** Allocate an owner and an approver to every workstream from one place. */
+function AllocationTable({ allocation, contacts }: { allocation: Allocation; contacts: Contact[] }) {
+  const options = contacts.map((c) => ({ id: c.id, label: `${c.initials} — ${c.name}` }));
+  return (
+    <section>
+      <h2 className="mb-1 text-sm font-semibold uppercase tracking-wide text-muted">Workstream allocation</h2>
+      <p className="mb-2 text-sm text-muted">Who manages (Owner) and who approves (Approver) each workstream.</p>
+      {allocation.length === 0 ? (
+        <Empty>This site has no workstreams yet.</Empty>
+      ) : (
+        <Card className="overflow-x-auto">
+          <table className="w-full min-w-[700px] text-sm">
+            <thead className="border-b border-line text-left text-xs uppercase tracking-wide text-muted">
+              <tr>
+                <th className="w-12 px-4 py-2.5 font-medium">#</th>
+                <th className="px-4 py-2.5 font-medium">Workstream</th>
+                <th className="w-72 px-4 py-2.5 font-medium">Owner</th>
+                <th className="w-72 px-4 py-2.5 font-medium">Approver</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-line">
+              {allocation.map((w) => (
+                <tr key={w.id}>
+                  <td className="px-4 py-2 text-muted tabular">{w.code}</td>
+                  <td className="px-4 py-2 font-medium text-ink">{w.name}</td>
+                  <td className="px-4 py-1.5">
+                    <PersonSelect workstreamId={w.id} role="ownerId" value={w.ownerId ?? ""} options={options} />
+                  </td>
+                  <td className="px-4 py-1.5">
+                    <PersonSelect workstreamId={w.id} role="approverId" value={w.approverId ?? ""} options={options} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </Card>
+      )}
+    </section>
   );
 }

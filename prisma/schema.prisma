@@ -78,7 +78,8 @@ model Contact {
   phone        String       @default("")
   email        String       @default("")
   leaveNotes   String       @default("")
-  ownedStreams Workstream[]
+  ownedStreams    Workstream[] @relation("WsOwner")
+  approvedStreams Workstream[] @relation("WsApprover")
   ownedTasks      Task[]    @relation("Owner")
   signOffTasks    Task[]    @relation("SignOff")
   collaboratingOn Task[]    @relation("Collaborators")
@@ -91,8 +92,12 @@ model Workstream {
   code      String
   name      String
   sortOrder Int
-  ownerId   String?
-  owner     Contact? @relation(fields: [ownerId], references: [id], onDelete: SetNull)
+  /// default person managing the workstream
+  ownerId    String?
+  owner      Contact? @relation("WsOwner", fields: [ownerId], references: [id], onDelete: SetNull)
+  /// default person approving the workstream's work
+  approverId String?
+  approver   Contact? @relation("WsApprover", fields: [approverId], references: [id], onDelete: SetNull)
   tasks     Task[]
 }
 

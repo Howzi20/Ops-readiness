@@ -92,7 +92,9 @@ async function seedDemoSite(templateId: string) {
   let n = 0;
   for (const ws of streams) {
     const owner = byInit[owners[ws.name]];
-    await db.workstream.update({ where: { id: ws.id }, data: { ownerId: owner } });
+    // client-facing workstreams are approved by the client; the rest by the GM
+    const clientApproves = ["Onboarding", "Tenant Onboarding", "Transition", "Post Transition"].includes(ws.name);
+    await db.workstream.update({ where: { id: ws.id }, data: { ownerId: owner, approverId: clientApproves ? byInit.RP : byInit.PS } });
     for (const t of ws.tasks) {
       n++;
       const r = (n * 37) % 100;
