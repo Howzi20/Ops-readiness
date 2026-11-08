@@ -2,7 +2,7 @@ import { defineConfig } from "@playwright/test";
 
 // Runs against a throwaway database (prisma/e2e.db) seeded fresh for each run.
 const PORT = 3201;
-const env = { DATABASE_URL: "file:./e2e.db", SESSION_SECRET: "e2e-only-secret-0123456789abcdef", REQUIRE_LOGIN: process.env.REQUIRE_LOGIN ?? "false" };
+const env = { DATABASE_URL: "file:./e2e.db", SESSION_SECRET: "e2e-only-secret-0123456789abcdef", REQUIRE_LOGIN: process.env.REQUIRE_LOGIN ?? "false", APP_URL: `http://localhost:${PORT}`, SMTP_HOST: "" };
 
 export default defineConfig({
   testDir: "e2e",

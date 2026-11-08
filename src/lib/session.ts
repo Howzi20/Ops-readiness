@@ -29,7 +29,8 @@ export async function verifySession(token: string | undefined): Promise<SessionP
   if (!token) return null;
   try {
     const { payload } = await jwtVerify(token, key());
-    return { userId: String(payload.userId), name: String(payload.name) };
+    if (typeof payload.userId !== "string" || typeof payload.name !== "string") return null;
+    return { userId: payload.userId, name: payload.name };
   } catch {
     return null;
   }

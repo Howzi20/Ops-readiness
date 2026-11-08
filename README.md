@@ -51,6 +51,27 @@ The database is a single local file (`prisma/dev.db`, not committed). Delete it 
 Manual override wins. Otherwise **Red** = past target date and not Completed/N/A; **Yellow** = due within 14 days and
 under 50%; **Green** otherwise. The rules are in `src/modules/readiness/rules.ts`.
 
+## Approval emails
+
+When a task with an Approver reaches **Awaiting approval**, the Approver is emailed a **Review & approve** link
+(it works without logging in, only for that person and task, for 30 days). The Owner is emailed when the task is
+approved or returned. Every email is listed on the **Outbox** page.
+
+Until email is set up, emails are kept in the Outbox instead of being sent, so you can still open the links and
+try the flow. To send real emails, fill these in `.env` and restart `npm run dev`:
+
+```bash
+APP_URL="http://localhost:3200"     # the address people use to open the app (used in email links)
+SMTP_HOST="smtp.office365.com"      # or smtp.gmail.com
+SMTP_PORT="587"
+SMTP_USER="you@yourcompany.com"
+SMTP_PASS="your password or app password"
+MAIL_FROM="Operations Readiness <you@yourcompany.com>"
+```
+
+Approvers need an email address on the **Contacts** tab. While the app only runs on your Mac, email links only open
+on your Mac; once it's hosted, set `APP_URL` to the hosted address so the links work for everyone.
+
 ## Code layout
 
 ```

@@ -17,6 +17,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
           <div>
                         <NavLink href="/readiness" exact={false} exclude="/readiness/templates">Sites</NavLink>
             <NavLink href="/readiness/templates">Templates</NavLink>
+            <NavLink href="/outbox">Outbox</NavLink>
           </div>
           {withLogin && (
             <div>

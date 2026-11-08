@@ -167,3 +167,16 @@ model Risk {
   action       String    @default("")
   status       String    @default("OPEN") // OPEN | CLOSED
 }
+
+/// Every email the app sends (or would send, when SMTP isn't configured).
+model EmailLog {
+  id        String   @id @default(cuid())
+  to        String
+  subject   String
+  html      String
+  text      String
+  status    String // SENT | NOT_CONFIGURED | FAILED | NO_ADDRESS
+  error     String   @default("")
+  taskId    String?
+  createdAt DateTime @default(now())
+}

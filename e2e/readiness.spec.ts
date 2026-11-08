@@ -47,6 +47,7 @@ test("(log in if required,) create a site, work a task across views, see it on t
   await page.getByRole("button", { name: "+ Add contact" }).click();
   await page.locator("input[name=name]").fill("Pat Client");
   await page.locator("input[name=initials]").fill("PC");
+  await page.locator("input[name=email]").fill("pat@example.com");
   await page.getByRole("button", { name: "Save contact" }).click();
   await expect(page.getByRole("cell", { name: "Pat Client" })).toBeVisible();
 
@@ -65,10 +66,22 @@ test("(log in if required,) create a site, work a task across views, see it on t
   await expect(second.getByRole("button", { name: "status" })).toHaveText("Awaiting approval");
   await second.getByTitle("Open task").click();
   await expect(page.getByText("Waiting for approval from")).toBeVisible();
+  await page.getByRole("button", { name: "Close" }).click();
+  const workstreamUrl = page.url();
+
+  // the approver gets an email (kept in the Outbox here) whose link approves the task without logging in
+  await page.getByRole("link", { name: "Outbox" }).click();
+  await expect(page.getByText(/Approval needed:/).first()).toBeVisible();
+  await expect(page.getByText(/To pat@example.com/).first()).toBeVisible();
+  await page.getByRole("link", { name: "Open link" }).first().click();
+  await expect(page.getByText("Approval for Pat Client")).toBeVisible();
   await page.getByRole("button", { name: "Approve", exact: true }).click();
   await expect(page.getByText(/Approved by/)).toBeVisible();
-  await page.getByRole("button", { name: "Close" }).click();
+  await page.goto(workstreamUrl);
   await expect(second.getByRole("button", { name: "status" })).toHaveText("Completed");
+  await second.getByTitle("Open task").click();
+  await expect(page.getByText(/Approved by/)).toBeVisible();
+  await page.getByRole("button", { name: "Close" }).click();
 
   // other views render the same tasks
   await page.getByRole("tab", { name: /Bucket/ }).click();

@@ -7,6 +7,7 @@ import { requireUser } from "@/lib/auth";
 import { parseDateInput } from "@/lib/dates";
 import { DOCUMENTED, FLAGS, ORGANISATIONS, PHASES, RISK_LEVELS, RISK_STATUSES, STATUSES } from "./constants";
 import { applySignOff, normaliseTaskUpdate } from "./rules";
+import { approveTask, notifyApprover, returnTask } from "./approval";
 import { createSiteFromTemplate, duplicateTemplate, renumberTemplateWorkstreams, renumberWorkstreams, saveSiteAsTemplate } from "./templates";
 
 export type ActionResult = { ok: true } | { ok: false; error: string };
@@ -127,6 +128,10 @@ export async function updateTask(taskId: string, patch: TaskPatch): Promise<Acti
         updatedById: user.id,
       },
     });
+    // just finished and needs approval → email the approver (never blocks the save)
+    if (saved.status === "AWAITING_SIGNOFF" && current.status !== "AWAITING_SIGNOFF") {
+      await notifyApprover(taskId).catch((e) => console.error("Approval email failed", e));
+    }
     revalidatePath(sitePath(current.workstream.siteId), "layout");
     return { ok: true, progress: saved.progress, status: saved.status };
   } catch (e) {
@@ -134,20 +139,13 @@ export async function updateTask(taskId: string, patch: TaskPatch): Promise<Acti
   }
 }
 
-/** Approver approves: Awaiting approval → Completed, recorded on the task and in its updates. */
+/** Approver approves from inside the app: Awaiting approval → Completed. */
 export async function approveSignOff(taskId: string, approverName: string): Promise<ActionResult & { signedOffAt?: string }> {
   try {
     const user = await requireUser();
-    const name = approverName.trim() || user.name;
-    const t = await db.task.findUniqueOrThrow({ where: { id: taskId }, include: { workstream: true } });
-    if (t.status !== "AWAITING_SIGNOFF") throw new Error("This task isn't waiting for approval");
-    const now = new Date();
-    await db.$transaction([
-      db.task.update({ where: { id: taskId }, data: { status: "COMPLETED", progress: 100, signedOffAt: now, signedOffBy: name, updatedById: user.id } }),
-      db.taskUpdate.create({ data: { taskId, authorName: name, body: "✅ Approved — task completed." } }),
-    ]);
-    revalidatePath(sitePath(t.workstream.siteId), "layout");
-    return { ok: true, signedOffAt: now.toISOString() };
+    const r = await approveTask(taskId, approverName.trim() || user.name, user.id);
+    revalidatePath(sitePath(r.siteId), "layout");
+    return { ok: true, signedOffAt: r.signedOffAt.toISOString() };
   } catch (e) {
     return fail(e);
   }
@@ -157,15 +155,8 @@ export async function approveSignOff(taskId: string, approverName: string): Prom
 export async function returnSignOff(taskId: string, approverName: string, reason: string): Promise<ActionResult> {
   try {
     const user = await requireUser();
-    if (!reason.trim()) throw new Error("Give a reason so the owner knows what's needed");
-    const name = approverName.trim() || user.name;
-    const t = await db.task.findUniqueOrThrow({ where: { id: taskId }, include: { workstream: true } });
-    if (t.status !== "AWAITING_SIGNOFF") throw new Error("This task isn't waiting for approval");
-    await db.$transaction([
-      db.task.update({ where: { id: taskId }, data: { status: "IN_PROGRESS", progress: 90, updatedById: user.id } }),
-      db.taskUpdate.create({ data: { taskId, authorName: name, body: `↩️ Returned for more work: ${reason.trim()}` } }),
-    ]);
-    revalidatePath(sitePath(t.workstream.siteId), "layout");
+    const r = await returnTask(taskId, approverName.trim() || user.name, reason, user.id);
+    revalidatePath(sitePath(r.siteId), "layout");
     return { ok: true };
   } catch (e) {
     return fail(e);
