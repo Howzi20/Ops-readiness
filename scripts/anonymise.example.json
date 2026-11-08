@@ -1,0 +1,21 @@
+{
+ "_comment": "Copy to anonymise.local.json (git-ignored) and list the organisation, client, tenant, vendor and product names to replace. Ordered [regex, replacement] pairs; specific phrases first.",
+ "rules": [
+  [
+   "\\bAcme Property\\b",
+   "Managing Agent"
+  ],
+  [
+   "\\bACME\\b",
+   "Managing Agent"
+  ],
+  [
+   "\\bBigBuild Pty Ltd\\b",
+   "the Developer"
+  ],
+  [
+   "\\bFooSoft\\b",
+   "PMS"
+  ]
+ ]
+}

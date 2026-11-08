@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --color-ink: #0f1d2b;        /* sidebar, headings */
+  --color-ink-soft: #3c4b5c;   /* body text */
+  --color-muted: #6b7a8c;      /* secondary text */
+  --color-line: #e2e7ee;       /* borders */
+  --color-canvas: #f4f6f9;     /* page background */
+  --color-panel: #ffffff;      /* cards */
+  --color-accent: #0e7c86;     /* primary actions */
+  --color-accent-strong: #0a5f67;
+  --color-accent-soft: #e3f3f4;
+
+  --color-rag-red: #d9434f;
+  --color-rag-red-soft: #fdecec;
+  --color-rag-yellow: #d99a06;
+  --color-rag-yellow-soft: #fdf5e0;
+  --color-rag-green: #1f8f7a;
+  --color-rag-green-soft: #e3f3ef;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink-soft);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* tidy native controls */
+input, select, textarea { font: inherit; color: inherit; }
+input[type="range"] { accent-color: var(--color-accent); }
+
+.tabular { font-variant-numeric: tabular-nums; }

@@ -1,0 +1,3822 @@
+{
+ "name": "New build (standard)",
+ "description": "Construction / blank canvas to operational readiness: onboarding, transition, people, technology, finance, leasing, engineering, customer experience, sustainability and post-PC.",
+ "workstreams": [
+  {
+   "code": "1",
+   "name": "Onboarding",
+   "tasks": [
+    {
+     "section": "General Transition Activity",
+     "title": "Client drafting of PMA proforma",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Receive draft PMA from client",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Managing Agent legal review of PMA",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Revert to client on PMA comments, amendments",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Negotiate and agree final PMA",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Managing Agent execution of PMA",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Client execution of PMA",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Central logging and storage of PMA",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Schedule kick-off meeting with Client-establish date, location, time, etc.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Notify key transition team members (Client & Managing Agent) of kick-off meeting",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Conduct Kick-off meeting: review transition plan & milestones",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Reach agreement with Client on all critical dates/milestones",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Confirm receipt of detail list of all site data",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Agree on ongoing transition communication schedule with Client",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Distribute recurring transition call invitation, number and passcode to team",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Distribute transition plan on a weekly basis",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Provide Client with sample communications announcements (if required)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Transition Activity",
+     "title": "Conduct Weekly Transition Meetings",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Transition Shared Environment",
+     "title": "Create Folder for Transition",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Transition Shared Environment",
+     "title": "Allocate access rights for transition Folder",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Transition Shared Environment",
+     "title": "Establish Sharepoint and implement the standard filing system",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Management Activities",
+     "title": "Advise staff allocations",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Management Activities",
+     "title": "Identify IT equipment requirements in Management Offices",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Management Activities",
+     "title": "Clarify Client preference for the storage of original documentation.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Management Activities",
+     "title": "Confirm if Fire Proof Safe exists on site",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Management Activities",
+     "title": "Confirm with Client signage requirements for and to Management Office, directory boards",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Management Activities",
+     "title": "Finalise management team contact details, references etc",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Management Activities",
+     "title": "Seek Client approval to design and branding of asset",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Management Activities",
+     "title": "Obtain copies of property logo, style guidelines etc",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Management Activities",
+     "title": "Obtain security access passes for the client, management team and transition team",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Management Activities",
+     "title": "Assess current Business Continuity Plan for the property and recommend amendments to reflect the new management structure",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Tenant Communication",
+     "title": "Define Communications Strategy with Client",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Tenant Communication",
+     "title": "Introduction letter from Client/Managing Agent to property tenants",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Tenant Communication",
+     "title": "Agree tenant introduction / visitation schedule with the Client",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Tenant Communication",
+     "title": "Convene / attend initial tenant meetings",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Tenant Communication",
+     "title": "Update vendor transition letter with Managing Agent/Client account details and send to vendors",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Tenant Communication",
+     "title": "Update tenant transition letter with Managing Agent/Client account details and send to tenants",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Technology For Transition",
+     "title": "Establish Email Accounts for new Managing Agent Employees",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Technology For Transition",
+     "title": "Test auto-forwarding of Managing Agent email accounts",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Technology For Transition",
+     "title": "Set up re-direction and \"Out of Office\" message on previous managers email accounts prior to transition",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Technology For Transition",
+     "title": "Agree Performance Management and KPI Review Period",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Technology For Transition",
+     "title": "Agree KPI Score Card Format",
+     "priority": 1,
+     "phase": "PRE_PC"
+    }
+   ]
+  },
+  {
+   "code": "1A",
+   "name": "Tenant Onboarding",
+   "tasks": [
+    {
+     "section": "Contract",
+     "title": "Executed Heads of Agreement",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Contract",
+     "title": "Obtain copies of Executed AFLs",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Contract",
+     "title": "Any special conditions eg Green Lease",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Prepare And Deliver",
+     "title": "PCGs arranged - Fit out Guidelines",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Prepare And Deliver",
+     "title": "Operational technology requirements - refer to Tab 4.17 Tenant Integration",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Prepare And Deliver",
+     "title": "Financial requirements explanations - tax invoices, incentives, sundry charges, outgoings",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Prepare And Deliver",
+     "title": "Meeting key ongoing contacts / contact details",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Prepare And Deliver",
+     "title": "Onboarding pack provided - understanding House Rules, Waste Management, raising service requests etc",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Prepare And Deliver",
+     "title": "User Expereince / Access set up/passes- test from car park to End of Trip to Lockers to Lobby to Lifts to Tenancy",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Prepare And Deliver",
+     "title": "Visitor Management information provided",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Prepare And Deliver",
+     "title": "Contractor Management information provided",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Prepare And Deliver",
+     "title": "Loading dock management information provided",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Prepare And Deliver",
+     "title": "Agree billing and incentive with the Developer",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Prepare And Deliver",
+     "title": "Review Tenant storage and car park allocations",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Prepare And Deliver",
+     "title": "Tenant experience app Set up for day 1.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Move In And Handover",
+     "title": "Fit out documentation plus base building consultants sign off /certifications",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Move In And Handover",
+     "title": "Condition Report",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Move In And Handover",
+     "title": "Occupation Certificate received",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Move In And Handover",
+     "title": "Move in schedule",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Move In And Handover",
+     "title": "Obtain copies of Delap reports from the Developer/ or tenant",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Occupy And Engage",
+     "title": "Welcome - Day 1, Tenant Welcome gifts",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Occupy And Engage",
+     "title": "Tenant experience app - Sign up / Events etc",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Occupy And Engage",
+     "title": "Run through tenant onboarding checklist",
+     "priority": 1,
+     "phase": "PRE_PC"
+    }
+   ]
+  },
+  {
+   "code": "2",
+   "name": "Transition",
+   "tasks": [
+    {
+     "section": "Communication",
+     "title": "Provide samples of communication to tenants to Client for review. \nDocuments include:\n• House Rules\n• Tenant Fitout criteria/ guides",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Provide samples of communication to tenants to Client for review. \nDocuments include:\n• Any customer on-boarding forms\n• Lease application \n• Banking/ Direct debit authority (if differs to lease application)\n• Bank guarantees, security\n • Other documents/ comm examples\n • Financial transaction forms\n• Invoices, Credit notes\n• Debt recovery - 7,14 & 21 day letters\n• Public liability expiry letters",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Communication to suppliers and utilities",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Communication to outgoing Service Provider staff",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Internal communciations required to stakeholders, Facilities, Finance, Legal , etc",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Creditor listing",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Separable portions - Post Occupation Requirements from previous Development Consent",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Loading Dock and Freight Management Plan",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Cleaning - Service Contract",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Security - Service Contracts",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Fire - Service Contracts",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Mechanical - Service Contracts",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "ICN- Service Contracts",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Electrical - Service Contracts",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Gardening - Service Contracts",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Hygiene - Service Contracts",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Waste General - Service Contracts",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Waste Liquid - Service Contracts",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Waste Co-Mingle - Service Contracts",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Plumbing - Service Contracts",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Electricity - Service Contracts",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Lifts / Travellator - Service Contracts",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Car-Parks - Service Contracts",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Emergency Management -Service Contracts (Emergency Procedure Manual, Assembly Areas, Emergency Plans, Fire Warden Training Program)",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "All original service contract files for current contracts",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Originals of any contracts expired or in holdover",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Details of all Equipment Leases",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Façade and window cleaning contract (FY 27)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Facade Audit Engagement tower",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Locker Maintenance",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "EV Charging Stations Maintenance",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Parcel Lockers",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "BMU - Service Contracts",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "BMS/ISP/EMS/CCTV/Access control - service contract",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "DAS - Service Contract",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Davit Arm - Service contract",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Pest Contract",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Structural monorail",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "EOT Vending machines",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Internet / broadband",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Secondary Internet connection",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Automatic Doors",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Carpark Ratio and EV House Views updated",
+     "title": "Set up Building Management office for PC",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "CCTV and Camera Location and digital feed",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Master Key System Scope and Type",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Safety Kit (Ladder, Bollards, Tape, Cones, Spill Kit, Defibs.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "WHS Property First Aid Kit (Portable)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Review plantrooms and locations for plant EHS documentation - Cooling tower risk management plan",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Key Cabinet (100 Keys - Mechanical Keypad Type)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Carpark parking permits/cards (if applicable)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Web based Contractor sign in system (contractor sign-in system)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "ESM Logbooks",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "PPM schedule set up in CMMS",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "EEL Test logbooks - logbook database",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Managing Agent House Rules to be agreed by Client",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Managing Agent House Rules to be provided to tenants",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Compile Property Fit out Guide",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Property Fit out Guide to be agreed by client",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Compile Risk Management Folder (Hot Works, Confined Space, Roof Access, House Rules, Fit out Guide, Incident Form, Escalation Contact List, Risk Register)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Review all operational signage, prior to handover",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Review SOP's for operation services (visitor management system, contractor sign-in system, Parcel Locker)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Review of EV charging bays within the carpark",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Review carpark line marking",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Confirm Lighting Time clock times with client/agent (if applicable)",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Confirm Auto Door Time clock times with Client/Agent (if applicable)",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Confirm Mechanical Time clock times with Client/Agent (Common Areas)",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Confirm start date for infrastructure and service contractors",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain contractor contact list for any items still under warranty and service schedule from Client/Agent (O&Ms)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Complete Vendor Creation setup of all Contractors who do not have a current Managing Agent Vendor ID in PMS (shared services to assist - see bulk upload template). the Developer to advise of all new vendor not associated with the development",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Arrange handover overview/training through Client/Agent. (Fire, Mechanical, Hydraulics, Electrical, CCTV, BMS, Garden Reticulation, Other)",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Emergency Procedures Manual, Evacuation Plans and Training",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Compile Business Continuity Plan (if required)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Security procedures manual",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Cleaning procedures manual including material safety data sheets",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Collate or obtain Asset owned inventory listing (equipment and tools)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Security Phones, Radios, and numbers and passwords etc for security systems and access",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Originals of all permits and Licenses (eg: Fire permits)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Embedded Network - transfer of exemption request to AER",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain listing of all building material specifications (eg: tile/glass etc)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Signage specifications",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Copies of all base building drawings/specifications and location of originals",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Installation/Operation and Maintenance documents for all equipment",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Details of actual planned maintenance work history",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Details of energy metering and transfer NMI's to snowy.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Copy of Master Key Register",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Details of all passes and cards issued to tenants and contractors",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Asset register",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Contract schedule - to include name/form of contract/price p.a and expiry date",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Copy of annual fire safety statement",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain or Install Log books for fire doors, emergency lights and fire dampers",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Copy of Anchor Point Certification & Rooftop Platforms",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Check Rooftop platforms etc by heights contractor",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Copy of latest 'Slip Test Results'",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Obtain Details of any NABERS or other Green Projects",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Fire Services- Engagement of Consultants for defect and functionaly review.",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Mechanical – Engagement of Consultants for defect and functionaly review.",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "BMCS – Engagement of Consultants for defect and functionaly review.",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "BMU - Engagement of Consultants for defect and functionaly review.",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Lift - Engagement of Consultants for defect and functionaly review.",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Cyber security Engagement of Consultants for defect and functionality review.",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Access control and CCTV Engagement of Consultants for defect and functionaly review.",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Fire – General overview of system and operation",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Mechanical - General overview of system and operation. Design scope (and any amendments) drawings, make, model and installing contractor.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "BMCS - General overview of system and operation. Design scope (and any amendments) drawings, make, model and installing contractor.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Electrical - General overview of system and operation. Design scope (and any amendments) drawings, make, model and installing contractor.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Hydraulics - General overview of system and operation. Design scope (and any amendments) drawings, make, model and installing contractor.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Security Access System - General overview of system and operation. Design scope (and any amendments) drawings, make, model and installing contractor",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Obtain Hazardous substance register",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Obtain Asbestos Register",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Obtain Copy of trade waste certificates and agreements",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Obtain Fire line monitoring agreements and dedicated phone numbers",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Confirm Copy/Location of all tenancy fit out drawings (as built) and occupation certificates",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Obtain Copy of Cooling Tower Management Plans & Registrations where applicable",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Obtain Lift & Escalator registrations & safe to operate certification",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Obtain Pressure vessel registrations and annual inspection reports",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Obtain RPZ/TMV's Valve installations and annual test/certification",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Obtain Loading dock management plan",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Obtain Waste Management Plan",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Obtain Traffic Management Plan",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Access control integration",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "VMS/QR code reader integration",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Carpark Management System",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Facade Audit Engagement of Consultants for defect and functionaly review.",
+     "title": "Obtain Compactus maintenance documentation and training register",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Legal/Statutory/Vals",
+     "title": "Details of any pending legal action against the Asset (eg P/L - Personal Injury matters)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Legal/Statutory/Vals",
+     "title": "Details of any legal action against Tenants or Suppliers. Litigation schedule",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Legal/Statutory/Vals",
+     "title": "Status of any pending regulatory compliance issues",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Legal/Statutory/Vals",
+     "title": "Annual Fire Safety Statement",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Legal/Statutory/Vals",
+     "title": "Status of Property Incident Reports (eg P/L) Register of all Incidence reports",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Legal/Statutory/Vals",
+     "title": "Details of any applications to Council",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Legal/Statutory/Vals",
+     "title": "Details of Current Statutory Values and any Appeals",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Legal/Statutory/Vals",
+     "title": "Copy of the Last Valuation or asset report of the property",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Legal/Statutory/Vals",
+     "title": "Check what insurance coverage is required, e.g. Property All Risks, Public Liability, Money Insurance, Loss of Rental, etc. Obtain competitive quote for Client approval (if applicable)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Legal/Statutory/Vals",
+     "title": "Signage - CCTV \"Surveillance Cameras in use\" \"no Smoking or vaping\", Wayfinding for EOT from - Lobby to EOT - DDA Totem pole with correct signage as listed.",
+     "priority": 2,
+     "phase": "PRE_PC"
+    }
+   ]
+  },
+  {
+   "code": "3",
+   "name": "Human Resources",
+   "tasks": [
+    {
+     "section": "Communication",
+     "title": "Confirmation of Organisational Structure",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Notification of existing employee transitions to clients",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Seek client approval for team salaries",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Confirm basis of engagement with prior Managers management - employement conditions",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Brief Recruitment Team - see below",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Prepare new employee information (FAQ's/ Job Descriptions)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Contact preferred prior Managers employees",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Seek client approval for salary and start date",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Prepare and issue Letters of Offer, contracts for new employees",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Receipt of contracts back from prospective employees",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Complete systems set-up",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Initiate transfers of existing Managing Agent employees",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Conduct induction program",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Assess and schedule specific training",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Recruitment",
+     "title": "Confirm finalised organisation chart",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Recruitment",
+     "title": "Identify any positions not filled by existing personnel",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Recruitment",
+     "title": "Complete job descriptions for all key roles",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Recruitment",
+     "title": "Advertise positions on Connect / external careers site",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Recruitment",
+     "title": "Hiring manager interviews",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Recruitment",
+     "title": "Client to conduct final interviews for key roles",
+     "priority": 1,
+     "phase": "PRE_PC"
+    }
+   ]
+  },
+  {
+   "code": "4",
+   "name": "Operational Technology",
+   "tasks": [
+    {
+     "section": "Access Card",
+     "title": "Confirm Physical Access Card Testing process:\n1. Create test cardholder profile in base building ACS (e.g. 'Site test user')\n2. Program physical card and assign to test user profile\n3. Test card on all exposed access card readers (lobby, EOT, plant room, car park, boom gate, lift DCS, etc.)\n4. Confirm access attempts (granted/denied) are logged in ACS with correct timestamps\n5. Verify test user fields in ACS are correctly populated (name, card number, credential type, access group)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Access Card",
+     "title": "Conduct walkthrough to verify readers are installed at all DDA doors",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Digital Access",
+     "title": "Confirm mobile credential portal access & assign authorised admin",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Digital Access",
+     "title": "Confirm reader flashing, firmware upgrade, required reader settings",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Digital Access",
+     "title": "Confirm digital access testing procedure",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Tenant Integration",
+     "title": "Develop and document tenant onboarding methodology for base building access",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Tenant Integration",
+     "title": "Mandate minimum onboarding data sync method (e.g. CSV import) between tenant ACS and base building ACS",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Tenant Integration",
+     "title": "Conduct end-to-end test cases of tenant-issued cards for access to base building touchpoints",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Tenant Integration",
+     "title": "Develop tenant mobile credential onboarding process (e.g. Mob Key Delegation)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Tenant Integration",
+     "title": "Confirm only base building credential types are accepted by integrated systems (lockers, lifts)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Tenant Integration",
+     "title": "Verify provisioning/de-provisioning workflow between locker system and ACS is active",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Vertical Transport",
+     "title": "Confirm module compatibility with digital credentials (BLE/NFC/ECP)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Vertical Transport",
+     "title": "Ensure lift screens are displaying correct content",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Cctv",
+     "title": "Confirm all cameras are visible on VMS and mapped to camera matrix",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Cctv",
+     "title": "Validate camera FOV and blind spot coverage",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Cctv",
+     "title": "Confirm retention settings meet policy (e.g. 60 days) and failover testing scenario",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Cctv",
+     "title": "Confirm event-triggered recording via ACS (if applicable)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Cctv",
+     "title": "Confirm incident response/export procedures are documented and understood by Security",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "End-of-Trip Lockers",
+     "title": "Confirm electronic locker assignment and override functions (assignment method, authentication, release, override)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "End-of-Trip Lockers",
+     "title": "Verify ACS integration for user synchronisation",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "End-of-Trip Lockers",
+     "title": "Confirm compatibility of tenant-issued card types with locker system and access control integration",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "End-of-Trip Lockers",
+     "title": "Confirm allocation software is configured for Day 1 tenants",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "End-of-Trip Lockers",
+     "title": "Create and maintain a register of tenant locker allocations",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "End-of-Trip Lockers",
+     "title": "Check ECP compatibility (Apple wallet)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Contractor Check-in (contractor sign-in system)",
+     "title": "Confirm contractor check-in tablet is installed at agreed point(s)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Contractor Check-in (contractor sign-in system)",
+     "title": "Check tablet connectivity (Wi-Fi or wired) is online and reliable",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Key Cabinet",
+     "title": "Verify the cabinet is powered and network-connected",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Key Cabinet",
+     "title": "Test admin login and confirm connectivity to web platform",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Key Cabinet",
+     "title": "Confirm integraiton with contractor sign-in system and test approval workflow",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Key Cabinet",
+     "title": "Security Team to record all single keys and passes in Excel register",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Key Cabinet",
+     "title": "Clearly label and assign key types",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Key Cabinet",
+     "title": "Data upload and validation",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Key Cabinet",
+     "title": "Operational handover",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Loading Dock Management",
+     "title": "Verify dock booking system is functional and on building network",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Loading Dock Management",
+     "title": "Confirm access controls, intercoms, and height signage are in place and operational",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Loading Dock Management",
+     "title": "Confirm loading signage and induction instructions are displayed",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Loading Dock Management",
+     "title": "Expand Licenses in visitor management system - Addtional license fees and limitations",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Car Park Management",
+     "title": "Test LPR recognition across lighting conditions, angles, and multiple plate types (are motorbikes (rear plates only) captured?)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Car Park Management",
+     "title": "Confirm LPR remote access and log retrieval is available for incident review",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "ISP (Integrated Services Platform)",
+     "title": "Confirm tentnat access requirements",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "EV Charging",
+     "title": "Set up Account with the EV charging provider, provide Bank Details, EV rates and sign T&Cs via portal (as requested by the Developer)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Internet Service Provisioning",
+     "title": "Confirm internet service is provisioned to the site; verify lead times, install dates, and site access protocols with provider:\nNotes:\n1. Request a business-grade plan with static IPs or a routed subnet\n2. Confirm handoff type (RJ45 or fibre) and NTU location in the MDF\n3. Ensure provider delivers: Fibre from pit to MDF, FOBOT, Splicing into NTU in agreed rack location, Confirm public IP will be routed to the ICN firewall, not the NTU\n4. Coordinate patching from NTU to ICN firewall (via ICN contractor)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Secure Remote Access",
+     "title": "Confirm vendor VPN access is operational with MFA and session logging",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Public Wi-Fi",
+     "title": "Check signal strength in lobby, plant, EOT and BOH areas",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Security Office Setup / Relocation",
+     "title": "Room setup and infrastructure (cleaned and powered)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Security Office Network & Connectivity",
+     "title": "Security Room migration and setup:\nWorkstations, monitors, phones, UPS installed and tested\nEHS and fire compliance requirements\nData ports patched, labelled, tested, and mapped to correct VLANs\nNetwork switch configured for ACS, CCTV, intercoms, ISP\nWired internet confirmed on all desks\nwireless internet available and tested\nTest VOIP phone / two way radios / lift phones connectivity",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Systems & Software",
+     "title": "CCTV, ACS, Intercom/duress, ISP, Dock Booking, printers or shared equipment",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "User Access",
+     "title": "Confirm security can log in to ACS, CCTV, ISP, email, Managing Agent systems",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Distributed Antenna System (DAS)",
+     "title": "Engage Telco Access Services (TAS) for site transition commissioning and TSP onboarding 6 months pre PC",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Icn",
+     "title": "Confirm warranty and maintenance",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Independent Consultants",
+     "title": "Engage independent consultants",
+     "priority": 2,
+     "phase": "PRE_PC"
+    }
+   ]
+  },
+  {
+   "code": "4A",
+   "name": "Information Technology",
+   "tasks": [
+    {
+     "section": "Communication",
+     "title": "Initiate preliminary investigations of service provision with provider",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Collate and agree all Users and locations at which standard Managing Agent IT services are required",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Design the new IT architecture to support the property team. Examine opportunities to integrate exising Client equipment",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Determine existing back up infrastructure and regime",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Determine existing email architecture and owner preference",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Determine existing IT infrastructure funding model",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Determine existing software licence ownership",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Determine the existing IT Architecture with single line diagram",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Establish an IT transition plan with Managing Agent IT",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Explore opportunities to implement premium property standard IT infrastructure",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Order printer(s) -",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Seek indicative per unit pricing for IT set up",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Table design and estimated costs with Client and secure agreement to deploy and agree the preferred funding model",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Determine client preference for IT infrastructure funding model",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Place orders for provider network provision",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Place orders of PCs, displays, switch, access points",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Arrange site inspection of office IT racks etc",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Formalise ASE support agreement",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Formalise other equipment agreement",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Place order (if required) for new equipment",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Investigate short term temporary IT solution for new management office (if necessary)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Procure equipment for short term solution (if necessary)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Install and commission short term solution (if neseccary)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Procure equipment cabinet and ancilliary equipment (if necessary)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Install network cabling from floor IDF to management office patch panel",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Deployment of PCs",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Deployment of networking equipment",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Activation of network data links and equipment deployment",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Completion of equipment configuration",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Deploy short term network solution if necessary",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Back up of existing data from server and individual PCs",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Back up User existing PST files, transfer to new PCs and map to MS Outlook",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Map / redirect email addresses of required employees",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Install any non-standard software applications on User PCs",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Ensure invoice processing and payment regime is clearly understood and enacted",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Communication",
+     "title": "Office phone lines, lift phones, fire lines transfer etc - authorised contact",
+     "priority": 2,
+     "phase": "PRE_PC"
+    }
+   ]
+  },
+  {
+   "code": "5",
+   "name": "Finance",
+   "tasks": [
+    {
+     "section": "General",
+     "title": "Obtain details of property ownership (incl ABN). Is a separtate cost centre required?",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Agree with the Client the methodology to be implemented for the establishment of the property management system (PMS) environment",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Client Sign Off on property setup structure",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Set up Client(s) as vendor in PMS and the finance system",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Complete Property Set up form",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Obtain current reporting schedule and calendar from Client",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Prepare a financial reporting calendar aligned with the Management Agreement and current practice.",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Prepare pre PC capex requirements and agree process for funding and payment",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Establish agreed business processes, task segregation and work flows involving the site based property team, the centralised business services and the National team",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Define and agree FALA delegation and segregation of responsibilities and authorities",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Create contracts in the finance system for management fees, salary recoveries and IT recoveries",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Establish Finance meetings with the property team, state based team and National Team.",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Business Processes",
+     "title": "Agree process maps that will be documented as per transition and training process (both Finance and Operations)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Business Processes",
+     "title": "Reconcile standard Managing Agent process against Client scope",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Business Processes",
+     "title": "Any gaps identified, review and agree correct process",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Business Processes",
+     "title": "Confirm Documentation of all processes",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Business Processes",
+     "title": "CASH - Reconcile account Cash Balances.",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Business Processes",
+     "title": "IFRS - Reconcile PMS calculated values to existing Spreadsheet",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Business Processes",
+     "title": "Managing Agent and client Sign Off",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Client Interface Files_ Software",
+     "title": "Any software applicable",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Chart Of Accounts Set Up",
+     "title": "Obtain COA information from Client.",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Chart Of Accounts Set Up",
+     "title": "Map Client COAs to PMS chart of accounts",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Chart Of Accounts Set Up",
+     "title": "Complete PMS chart of accounts Conversion Lookup tables",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Chart Of Accounts Set Up",
+     "title": "Managing Agent and client Sign Off",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Reporting",
+     "title": "Review client reporting pack and reporting requirements",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Reporting",
+     "title": "Prepare and seek Client approval on form of reports (including debtors, Capex)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Reporting",
+     "title": "Complete report GAP analysis based on current Managing Agent reports and Client requirements",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Reporting",
+     "title": "Review report GAP analysis with Managing Agent system support teams",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Reporting",
+     "title": "Managing Agent developers to provide the time frame to develop custom reports.",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Reporting",
+     "title": "UAT process of custom reports",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Reporting",
+     "title": "Managing Agent and Client sign off",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Reporting",
+     "title": "Create Report Pack in PMS if required",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Training",
+     "title": "Identify any training requirements",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Bank Account Set Up",
+     "title": "Based on company setup confirm the bank account structure",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Bank Account Set Up",
+     "title": "Advise trust accounting team of new Client and bank accounts",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Bank Account Set Up",
+     "title": "Agree the structure and intended operation of property bank accounts",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Bank Account Set Up",
+     "title": "Assist the Client in the application to establish new bank accounts",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Bank Account Set Up",
+     "title": "Define and agree Managing Agent personnel to have access to the bank accounts, and their levels of access",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Bank Account Set Up",
+     "title": "JBS team to provide test data for payment outsourcing",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Bank Account Set Up",
+     "title": "Managing Agent and Client sign off",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Purchase Orders",
+     "title": "Agree invoice process",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Purchase Orders",
+     "title": "Agree PMS systems roles for all Users",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Purchase Orders",
+     "title": "Check for existing vendors in current PMS vendor list. Match - ABN, Bank Dtls, Address, Payment Terms, Payment Instrument.",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Purchase Orders",
+     "title": "Request PO's from client",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Purchase Orders",
+     "title": "Confirm dates PO's will be received",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Purchase Orders",
+     "title": "Receive PO's",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Purchase Orders",
+     "title": "Reconcile PO's against Accruals",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Purchase Orders",
+     "title": "Reconcile PO's against Pricing",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Purchase Orders",
+     "title": "Managing Agent and client Sign Off of outstanding Pos",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Purchase Orders",
+     "title": "Start processing PO's",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Connectivity",
+     "title": "Test PMS connectivity and performance for all Users",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Other",
+     "title": "Agree invoice treatment of national team, Management Fee and Technology costs",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Other",
+     "title": "Review Managing Agent invoice format and agree if it meets client requirements",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Other",
+     "title": "Load Opening ledger balances - cash and accrual - including sub ledgers.",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Other",
+     "title": "Client sign off of Trial Balance and sub ledgers",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Other",
+     "title": "GO LIVE Start processing receipting and AP invoices",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Property Budget",
+     "title": "Obtain current budgets (cash and accrual)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Property Budget",
+     "title": "Obtain latest trial balances and Actuals vs Budget/Forecast from Client",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Property Budget",
+     "title": "Review current property budget(s)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Property Budget",
+     "title": "Review client approved budget for future fiscal year.",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Property Budget",
+     "title": "Import approved budgets into PMS (Cash, Accrual)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    }
+   ]
+  },
+  {
+   "code": "6",
+   "name": "Lease Administration",
+   "tasks": [
+    {
+     "section": "General",
+     "title": "Review list of all documentation and information to be provided by the Client/Agent and request from the Client/Agent",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Check all required documents and information received from client/agent",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Review the current relationships between Lessees and their monthly rent roll invoicing requirements. Compare to standard Managing Agent structure",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Review the current Lessee miscellaneous charges structure and compare to standard Managing Agent structure. Seek Client approval to changes to structure if recommended",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Review & compare incoming agents tenancy schedule & set up with Managing Agent standard structure",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Agree PMS structure, including codes and naming conventions",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Client Sign Off on property setup structure",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "PMS Support team to create buildings, entities and landlords in PMS once form completed",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Check Setup. Make changes if required.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Ascertain offshoring responsibiities and implement control & training",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General",
+     "title": "Team set up for utilising offhsore (Lease Admin)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Pms Lease Administration Implementation",
+     "title": "Review standard lease for site and compile & agree standard notes & content of information",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Pms Lease Administration Implementation",
+     "title": "Ascertain trust account for receipting and set up PMS accordingly (Office and Supplier ID's)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Pms Lease Administration Implementation",
+     "title": "Undertake first principles review of all leases, licences and other agreements",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Pms Lease Administration Implementation",
+     "title": "Build PMS system for each suite & licenced area",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Pms Lease Administration Implementation",
+     "title": "Review and agree on suite set up",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Pms Lease Administration Implementation",
+     "title": "Extract leases and licenses and enter base details into transition set up forms and PMS",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Pms Lease Administration Implementation",
+     "title": "Check and sign off base details against Agent/Client Tenancy Schedule and last issued invoices",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Pms Lease Administration Implementation",
+     "title": "Extract full Lease Details and Enter full lease data in to PMS",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Pms Lease Administration Implementation",
+     "title": "Review and sign off lease profiles and tenancy schedule",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Pms Lease Administration Implementation",
+     "title": "Provide checklist for miscellaneous invoicing - tick off for each rent roll",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Pms Lease Administration Implementation",
+     "title": "Ensure all bank guarantees and PLIs are in place; set up master file of copies; (noting where originals are held)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Pms Lease Administration Implementation",
+     "title": "Ensure all originals (if applicable) are received and held on site in fire proof safe",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Pms Lease Administration Implementation",
+     "title": "Establish RED's and transfer to Managing Agent RED (Interest bearing accounts if applicable)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Debtor / Tenant Communication",
+     "title": "Identify Mailing addresses for debtors communications (invoices, statements, bank details updates and remittance advices)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Debtor / Tenant Communication",
+     "title": "Update tenant transition letter with Managing Agent/Client account details",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Debtor / Tenant Communication",
+     "title": "Update \"How to read Managing Agent Invoice\" guide",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Debtor / Tenant Communication",
+     "title": "Distribute transition letter along with \"How to read Managing Agent Invoice\" guide",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Rent Roll",
+     "title": "Run dummy rent roll for month and reconcile to current Manager rent roll for prior month",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Rent Roll",
+     "title": "Run Managing Agent rent roll and reconcile to current Managers prior month rent roll",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Rent Roll",
+     "title": "First rent roll differences to be agreed and signed off with Client/Prior Prop Mgr or rectified to reach an agreed position",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Rent Roll",
+     "title": "ReRun rent roll reports if required",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Rent Roll",
+     "title": "Sign-off Rent Roll",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Rent Roll",
+     "title": "Create first month's Sundry Charges if information available",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Rent Roll",
+     "title": "Distribute rental invoices / statements to tenants along with additional correspondence on bank & remittance details",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Rent Roll",
+     "title": "Arrears - reconcile to Client Debtors, tenant by tenant and ageing",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Rent Roll",
+     "title": "Review and load take on balances (sundry charges)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Rent Roll",
+     "title": "Distribute statements to tenants for take on outstanding balances",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Rent Roll",
+     "title": "Prepare Sundry Charge templates for standard monthly recharges (e.g Ahrs Air Con, Elec, Water)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "REPORTING (Client and Managing Agent Internal, does not include interface files)",
+     "title": "Review leasing analytics dashboards for data and output integrity (stacking plan)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "REPORTING (Client and Managing Agent Internal, does not include interface files)",
+     "title": "Establish required debtor and lease reporting required",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "REPORTING (Client and Managing Agent Internal, does not include interface files)",
+     "title": "Establish report with leasing analytics team and create on sharepoint for monthly reporting",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "REPORTING (Client and Managing Agent Internal, does not include interface files)",
+     "title": "Review & provide training where required with Managing Agent management site team",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Vendor Set Up",
+     "title": "Request vendor information from Client",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Vendor Set Up",
+     "title": "Review vendor information from Client",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Vendor Set Up",
+     "title": "Check for existing vendors in current CM3 vendor list. Match - ABN, Bank Dtls, Address, Payment Terms, Payment Instrument.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Vendor Set Up",
+     "title": "Sample check that vendor information is accurate against current Client invoices",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Vendor Set Up",
+     "title": "Complete CM3 certification set up if applicable (take not of CM3 #)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Vendor Set Up",
+     "title": "Complete PMS Vendor Set up forms",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Vendor Set Up",
+     "title": "Ensure owners are set-up as vendors",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Vendor Set Up",
+     "title": "Vendors to be linked to buildings in PMS",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Vendor Set Up",
+     "title": "Check outstanding issues for \"Transition of Vendors\". Agreed on resolution schedule and ownership",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Vendor Set Up",
+     "title": "Prepare handover information and documents to be provided to the new account team (FMs & sourcing manager(s)), including:\na) Vendor information\nb) Procurement guidelines\nc) Vendor management guidelines.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    }
+   ]
+  },
+  {
+   "code": "7",
+   "name": "Engineering",
+   "tasks": [
+    {
+     "section": "Information Gathering",
+     "title": "Create and agree site visit objectives and schedule",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Review current documention in way of the site condition survey (if available)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Review contact list for vendors and local authorities. Develop Contact List further as required",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "In consultation with the owners finalise Escalation Process",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Agree on Incident Reporting requirements and Finalise names for Escalation Workflow - Managing Agent escalation workflow",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Conduct Vendor briefing on Managing Agent requirements at the site",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Documentation Preparation",
+     "title": "Ensure emergency procedures are available for Day 1",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Documentation Preparation",
+     "title": "Operations Manuals",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Documentation Preparation",
+     "title": "Update property induction packs and load onto Cm3 & CM3Induct",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering Team",
+     "title": "Ensure all Managing Agent / Client site teams have all undertaken the sites induction and understand the specific needs of the site, that they are aware of the need for any specific PPE and systems in place",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering Team",
+     "title": "Review or develop specific site inspection schedules for day 1 operations",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering Team",
+     "title": "Review all systems, plant and equipment installation",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering Team",
+     "title": "As available assess current plant and equipment lifecycle plans",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering Team",
+     "title": "Assess current capital expenditure/ opex projects",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering Team",
+     "title": "Review the existing property Security Standing Orders and security operations within the property",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering Team",
+     "title": "Roles and responsibilities matrix developed and agreed",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering Team",
+     "title": "Critical Equipment & Services List",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering Team",
+     "title": "Where the need arises implement the AP CEM Manual",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering Team",
+     "title": "Access control measures in place currently for Critical Environments",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering Team",
+     "title": "Assess opportunities to include the property in any short term portfolio procurement processes",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering Team",
+     "title": "Clarify essential services and other certification regime milestones, including NABERS ratings",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering Team",
+     "title": "Co-ordinate detailed property tour of all plant and back of house areas",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering Team",
+     "title": "Draft initial Engineering and Operations Report to be reviewed and approved by Client",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Engineering Team",
+     "title": "Identify all Consultants for all essential services - ensure they are part of commissioning , witness testing",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Environment, Health & Safety",
+     "title": "Gather and review Client's EHS Policies and Procedures",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Environment, Health & Safety",
+     "title": "Identify any gaps in compliance, implement the Managing Agent's EHS system to the site",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Environment, Health & Safety",
+     "title": "Verify environmental due diligence / duty of care arrangements (Inc. licenses and permits)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Environment, Health & Safety",
+     "title": "Analyse waste streams and their management",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Environment, Health & Safety",
+     "title": "Brief Managing Agent Service Partners of Client's HS&E requirements",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Environment, Health & Safety",
+     "title": "Review any statistics on current HS&E statistics at the asset (are there any claims in progress?)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Environment, Health & Safety",
+     "title": "Review the current RMP's for the asset, to include but not limited to, Environmental Audit, Hazardous Materials Audit, CT RMP",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Environment, Health & Safety",
+     "title": "Assess current contract / site induction processes and compare to Managing Agent standard processes",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Cmms",
+     "title": "Confirm site to be loaded to CMMS with CMMS Team. Populate necessary data sets for this to occur",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Cmms",
+     "title": "Agree Mandatory Equipment and Service Type Fields",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Cmms",
+     "title": "Obtain copy of current vendor PPM databases",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Cmms",
+     "title": "Once populated review the Data Capture Templates with the site team to ensure all necessary equipment is identified (verification process)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Cmms",
+     "title": "Provide data to CMMS team to Load Agreed Data Configuration Templates into System",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Cmms",
+     "title": "Verify Uploaded Data",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Cmms",
+     "title": "Issue first set of work orders",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Cmms",
+     "title": "Assess current planned preventative maintenance plans",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Cmms",
+     "title": "Ensure all 3rd party supplier contracts and associated pricing schedules have been requested by Managing Agent. Contracts to be entered into PMS with contract rates.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    }
+   ]
+  },
+  {
+   "code": "7A",
+   "name": "Shared Services",
+   "tasks": [
+    {
+     "section": "Information Gathering",
+     "title": "Building Management Statement (BMS) review",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Review BMS apportionment tables- supporting template",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Sinking fund documentation",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Radio licencing purchase",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Loading dock SOP - timing, booking",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Emergency/Incident communciation and escalation",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Stats payments - accrued & invoices received",
+     "priority": 2,
+     "phase": "PRE_PC"
+    }
+   ]
+  },
+  {
+   "code": "8",
+   "name": "Customer Experience",
+   "tasks": [
+    {
+     "section": "Information Gathering",
+     "title": "Concierge Service - supplier, contract, service guidelines and handbook",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Community Hub contract",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Uniform policy - Concierge",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Uniform policy - Management Team",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Customer Service Awards Program",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Digital screens - lifts - 3rd party supplier and contract, signage specs and user manual, Content",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Digital screens - other lobby signage - 3rd party supplier and contract, signage specs and user manual",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Directory boards - user guide, protocols",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Non-digital signage stands",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Brand Guidelines and assets (logos, fonts, colour palette)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Branded templates (letterheads, email signature, business cards, leasing documents, signage etc.)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Marketing and communications strategy - internal customers (purpose, customer persona profiles, pillars, key messaging etc.)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Marketing and communications strategy - public-facing general (purpose, customer persona profiles, pillars, key messaging, touch points etc.)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Marketing and communications strategy - public-facing leasing (purpose, customer persona profiles, pillars, key messaging, touch points and collateral etc.)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Communications channels - email broadcasts to CREs, wardens etc. (platform, supplier + contract, user guide, hosting)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Communications channels - customer portal (provider, access, strategy, current ways of working with the provider - contract, hosting, usage reports)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Communications channels - public-facing website (strategy, updates managed by …, developer, hosting, contracts, usage reports/analytics etc.)",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Communications channels - internal-facing website for CREs housing operational information, maintenance request platform etc. (updates managed by …, developer, hosting, contracts etc.)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Communications channels - social media (platforms, access, managed by …, strategy, management contract, performance reports)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Photography - building architectural, building spaces e.g. EoT, events etc.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "End-of-Trip facilities - specs, terms and conditions, how are they assigned",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Bookable spaces - meeting rooms, co-working either managed by the building (complimentary to customers) or managed by a 3rd party - terms of use, current protocol for booking",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Outdoor public spaces - floor plans with power points, terms of use and considerations for activations",
+     "priority": 3,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Indoor public spaces - floor plans with power points, terms of use and considerations for activations",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Lobby Wi-Fi - supplier, contract, access to data",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Health & Wellbeing - strategy, provision of classes, provider, contract",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Community events calendar and budget",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Overall customer service/experience budget - covers all of the above items",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Customer Insights - Campbell Scholten's Surveys, Portal surveys, other",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Indigenous cultural awareness training - have personnel undertaken training?",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Reconciliation Action Plan",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "New tenant welcome process - protocols, welcome packs, documentation etc.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Christmas decorations - inventory, supplier, installation agreement",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Past press releases",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Other customer-facing, value add services and partnerships",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Booking system to Community Hub",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Information Gathering",
+     "title": "Booking System for \"Flex Space\"",
+     "priority": 1,
+     "phase": "PRE_PC"
+    }
+   ]
+  },
+  {
+   "code": "9",
+   "name": "Energy & Sustainability",
+   "tasks": [
+    {
+     "section": "General Set Up",
+     "title": "Confirm ESS scope",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Set Up",
+     "title": "Document/clarify exact delivery requirements and proceed to subsequent sections.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Set Up",
+     "title": "Confirm Development responsibility for initial NABERS rating, ensure if this is within operational scope it is captured in OPEX budget, or if development that the pathway is documented to meet this scope requirement.",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Set Up",
+     "title": "Confirm Development commitments that affect operational building running (green cleaning etc)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Set Up",
+     "title": "Acquire a Building Energy Efficiency Certificate",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Set Up",
+     "title": "Assess historical energy, water and waste data for the property",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Set Up",
+     "title": "Assess the current energy procurement contracts in place at the property and compare rates to portfolio data",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Set Up",
+     "title": "Assess the existing scope of electricity, gas and water metering",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Set Up",
+     "title": "Assess the tenant energy and water recharge regime in place",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Set Up",
+     "title": "Assess the waste collection, assessment and disposal regime proposed",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Set Up",
+     "title": "Confirm current performance, ratings, rating periods and performance aspirations",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Set Up",
+     "title": "Make recommendations for changes and improvements to energy, water and waste management, data collection and reporting",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Set Up",
+     "title": "Confirm reporting schedule and calendar from Client",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Set Up",
+     "title": "Confirm all Managing Agent operational commitments to the Client to be included within the WELL rating.",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Set Up",
+     "title": "Confirm any operational commitments through the Green Star Design & As Built rating, and DA",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "General Set Up",
+     "title": "Operational Waste - Waste Handbook, waste signage and inclusion of waste streams in the House Rules",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "CLIENT ESG SPoC",
+     "title": "Confirm client Single Point of Contact and other stakeholders",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Data",
+     "title": "Confirm App will be deployed",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Data",
+     "title": "Confirm the number of years that data is available and required for migration",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Data",
+     "title": "Confirm any gaps or issues with data quality across all fields (cost, consumption, energy, water, etc.)",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Data",
+     "title": "Client/service provider data handover, including gaps and assumptions log",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Data",
+     "title": "Upload data, conduct quality testing",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Data",
+     "title": "Undertake user acceptance testing, training, and provide go-live documentation",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Data",
+     "title": "Confirm responsibility for ongoing data collection and management. Document this process in detail with client sign-off",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Data",
+     "title": "Understand NABERS Commitment and associated energy modelling associated",
+     "priority": 2,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Building Management Office and WELL Commitments",
+     "title": "Onboard team to understand requirements of the WELL rating, and influences to the Building Management Space",
+     "priority": 1,
+     "phase": "PRE_PC"
+    },
+    {
+     "section": "Tenant Sustainability Notes",
+     "title": "A tenant requested extending operating hours of their offices, which will draw on base building electricity.",
+     "priority": 2,
+     "phase": "PRE_PC"
+    }
+   ]
+  },
+  {
+   "code": "14",
+   "name": "Post Transition",
+   "tasks": [
+    {
+     "section": "Communication",
+     "title": "Onsite 4-6 week post opening PMC/Client debrief",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Human Resources",
+     "title": "Review staffing requirements are adequate",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Human Resources",
+     "title": "IT set up for new staff",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Human Resources",
+     "title": "Managing Agent Systems access for new staff",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Human Resources",
+     "title": "Onboarding and training of staff",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Human Resources",
+     "title": "Site inspections by new staff",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Lease Admin/Tenant Related Items",
+     "title": "Confirm all tenants received tax invoice and statements",
+     "priority": 3,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Lease Admin/Tenant Related Items",
+     "title": "Confirm all tenants received new Managing Agent banking details, contact details of Managing Agent Property Team, (24/7 Customer Service Centre Number & account enquiry details if applicble)",
+     "priority": 3,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Lease Admin/Tenant Related Items",
+     "title": "Survey Plans to be provided by Client to enable lease registration and finalisation (if required)",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Lease Admin/Tenant Related Items",
+     "title": "Set up tenant meetings ( fortnightly or monthly) also Building management meetings (major tenants of meeting requirements per lease.",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Lease Admin/Tenant Related Items",
+     "title": "Set up up ESG, BM Whole of asset meetings as required under leases.",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Lease Admin/Tenant Related Items",
+     "title": "Confirm LCD date,Inceentive remianind anchor tenants.",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Lease Admin/Tenant Related Items",
+     "title": "Build PMS system for each suite & licenced area",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Finance And Accounting",
+     "title": "Monthly reporting dates and calendar agreed with client and provided to property team",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Finance And Accounting",
+     "title": "Budget loaded to PMS",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Finance And Accounting",
+     "title": "Land Tax transfer & Registraion, update details to ensure invoice isn’t lost or late paid.",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "Assessment of additional marketing requirement",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "Specialty Mall Leasing website and system (if applicable)",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "Submit stabilisation plan proposal (if applicable)",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "Sales figures, GST exclusive for the opening period - Report with Sales Categories noted",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "People counter report (if applicable) for opening period",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "Vending Machine EoT",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "Non-digital signage stands",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "Marketing and communications strategy - internal customers (purpose, customer persona profiles, pillars, key messaging etc.)",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "Communications channels - internal-facing website for CREs housing operational information, maintenance request platform etc. (updates managed by …, developer, hosting, contracts etc.)",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "Photography - building architectural, building spaces e.g. EoT, events etc.",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "End-of-Trip facilities - specs, terms and conditions, how are they assigned",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "Bookable spaces - meeting rooms, co-working either managed by the building (complimentary to customers) or managed by a 3rd party - terms of use, current protocol for booking",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "Health & Wellbeing - strategy, provision of classes, provider, contract",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "Community events calendar and budget",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "New tenant welcome process - protocols, welcome packs, documentation etc.",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "Other customer-facing, value add services and partnerships",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Marketing",
+     "title": "Booking system to Community Hub",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Procurement of Service Contracts not included in transition to be completed",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Contractors CM3 Prequalified and staff have completed CM3 & CM3 Induct",
+     "priority": 3,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Service Contracts",
+     "title": "Management and tracking of DLP",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "As-built drawings Folders for the property (Hard Copy Folders and Disc)",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "O&M Manuals (Hard Copy Folders and Disc)",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Review Transition Outstanding items",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Assessment of Cleaning/Security embedding",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Training - Safety Kit (Ladder, Bollards, Tape, Cones, Spill Kit)",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Training - First Aid (Cleaning / Security)",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Carpark parking permits/cards issued to Tenants (if applicable)",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Keys issued to Security, Cleaning, Tenants (if applicable)",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "House Rules installed on site, CM3 Induct and issued to tenants",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Property Fit out Guide installed on site, CM3 Induct and issued to tenants",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Risk Management Folder at sign in point (Hot Works, Confined Space, Roof Access, House Rules, Fit out Guide, Incident Form, Escalation Contact List, Risk Register)",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Training Fire Wardens, Cleaning, Security, Tenants",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "RISK Management System (iComply / OpsAIDE) within 3months of transition",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Statement of Business Ethics",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Safe Work Method Statement to be provided",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Managing Agent to contact electricity provider each time a tenant is set up or exited. This provider charges the tenants directly and manages all electricity",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "BMU - Service Contracts - BMU handover 6 months after PC.",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Review Powerpoints locations in lobby and open areas access if correct once in occupation.",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Assess the scope of electricity, gas and water metering",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "EOT vending machine",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Engineering And Operations",
+     "title": "Operational Waste - Waste Handbook, waste signage and inclusion of waste streams in the House Rules",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Office And Administration",
+     "title": "Email address changeover",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Office And Administration",
+     "title": "Phone line transfers",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Office And Administration",
+     "title": "Utilities Transfers",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Office And Administration",
+     "title": "Land Tax transfer & Registraion, update details to ensure invoice isn’t lost or late paid.",
+     "priority": 2,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Certificate of Occupation Permit",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Key System",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Architectural layout plans",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "License for the dangerous goods store (storage of diesel etc.,) - Explosives license (if applicable)",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "License for the PABX / Telecommunication system",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Roof Access System Certification",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Hot Water System",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Grey Water System (flush/Garden) water system",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Trade Waste Registration (Centre and Tenants)",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Electrical supply and distribution system",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Emergency power supply system",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Uninterrupted Power Supply (UPS) system (Centre, CMO, Other)",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Lightning protection system",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Earthling system",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Building Automation System",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Broadband system",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Public Address (PA) system",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Car Park / Smart Parking management system",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Access Control System (Security)",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "CCTV system",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Warranty certificates for all systems",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Testing and commissioning reports for all systems",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Asset List of equipment list detailing country of origin, brand name, model number, identification number, serial number and installed locations for all systems",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Contact list for original equipment supplier/contractor",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Operating log sheets",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Power and Metering NMI's",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Gas Metering NMI's",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Water Metering NMI's",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Utilities Metering Reading Power, Gas and Water",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Sustainability - NABERS/Green star/NGERS Energy and Water ratings and reports",
+     "priority": 1,
+     "phase": "POST_PC"
+    },
+    {
+     "section": "Handover",
+     "title": "Onboard team to understand requirements of the WELL rating, and influences to the Building Management Space",
+     "priority": 1,
+     "phase": "POST_PC"
+    }
+   ]
+  }
+ ]
+}

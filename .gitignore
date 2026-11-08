@@ -1,0 +1,13 @@
+node_modules
+.next/
+next-env.d.ts
+*.tsbuildinfo
+.env
+prisma/*.db
+prisma/*.db-journal
+test-results/
+playwright-report/
+*.xlsx
+prisma/test-*.db*
+prisma/e2e.db*
+scripts/anonymise.local.json
