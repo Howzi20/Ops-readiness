@@ -4,7 +4,7 @@ export const STATUS_LABEL: Record<Status, string> = {
   TO_COMMENCE: "To Commence",
   IN_PROGRESS: "In Progress",
   DELAYED: "Delayed",
-  AWAITING_SIGNOFF: "Awaiting sign-off",
+  AWAITING_SIGNOFF: "Awaiting approval",
   COMPLETED: "Completed",
   NA: "N/A",
 };

@@ -134,17 +134,17 @@ export async function updateTask(taskId: string, patch: TaskPatch): Promise<Acti
   }
 }
 
-/** Sign-off person approves: Awaiting sign-off → Completed, recorded on the task and in its updates. */
+/** Approver approves: Awaiting approval → Completed, recorded on the task and in its updates. */
 export async function approveSignOff(taskId: string, approverName: string): Promise<ActionResult & { signedOffAt?: string }> {
   try {
     const user = await requireUser();
     const name = approverName.trim() || user.name;
     const t = await db.task.findUniqueOrThrow({ where: { id: taskId }, include: { workstream: true } });
-    if (t.status !== "AWAITING_SIGNOFF") throw new Error("This task isn't waiting for sign-off");
+    if (t.status !== "AWAITING_SIGNOFF") throw new Error("This task isn't waiting for approval");
     const now = new Date();
     await db.$transaction([
       db.task.update({ where: { id: taskId }, data: { status: "COMPLETED", progress: 100, signedOffAt: now, signedOffBy: name, updatedById: user.id } }),
-      db.taskUpdate.create({ data: { taskId, authorName: name, body: "✅ Signed off — task completed." } }),
+      db.taskUpdate.create({ data: { taskId, authorName: name, body: "✅ Approved — task completed." } }),
     ]);
     revalidatePath(sitePath(t.workstream.siteId), "layout");
     return { ok: true, signedOffAt: now.toISOString() };
@@ -153,14 +153,14 @@ export async function approveSignOff(taskId: string, approverName: string): Prom
   }
 }
 
-/** Sign-off person sends the task back to the owner with a reason. */
+/** Approver sends the task back to the owner with a reason. */
 export async function returnSignOff(taskId: string, approverName: string, reason: string): Promise<ActionResult> {
   try {
     const user = await requireUser();
     if (!reason.trim()) throw new Error("Give a reason so the owner knows what's needed");
     const name = approverName.trim() || user.name;
     const t = await db.task.findUniqueOrThrow({ where: { id: taskId }, include: { workstream: true } });
-    if (t.status !== "AWAITING_SIGNOFF") throw new Error("This task isn't waiting for sign-off");
+    if (t.status !== "AWAITING_SIGNOFF") throw new Error("This task isn't waiting for approval");
     await db.$transaction([
       db.task.update({ where: { id: taskId }, data: { status: "IN_PROGRESS", progress: 90, updatedById: user.id } }),
       db.taskUpdate.create({ data: { taskId, authorName: name, body: `↩️ Returned for more work: ${reason.trim()}` } }),

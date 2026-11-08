@@ -12,7 +12,7 @@ export function ContactList({ siteId, contacts }: { siteId: string; contacts: Co
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <p className="text-sm text-muted">People on this site. Assign them as task Owner, Sign-off or Collaborator. Contacts don't need a login.</p>
+        <p className="text-sm text-muted">People on this site. Assign them as task Owner, Approver or Collaborator. Contacts don't need a login.</p>
         <button className={btn.primary} onClick={() => setEditing("new")}>+ Add contact</button>
       </div>
       {contacts.length === 0 && <Empty>No contacts yet.</Empty>}

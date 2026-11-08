@@ -91,8 +91,8 @@ export type SignOffUpdate = {
 };
 
 /**
- * Sign-off workflow. A task with a sign-off person can't go straight to Completed:
- * reaching 100% (or choosing Completed) moves it to Awaiting sign-off, and only an
+ * Approval workflow. A task with an approver can't go straight to Completed:
+ * reaching 100% (or choosing Completed) moves it to Awaiting approval, and only an
  * approval (see `approveSignOff` action) completes it.
  */
 export function applySignOff<T extends SignOffUpdate>(
@@ -103,7 +103,7 @@ export function applySignOff<T extends SignOffUpdate>(
   const signOff = out.signOffId !== undefined ? out.signOffId : current.signOffId;
   const status = out.status ?? current.status;
 
-  if (out.status === "AWAITING_SIGNOFF" && !signOff) throw new Error("Choose a sign-off person first");
+  if (out.status === "AWAITING_SIGNOFF" && !signOff) throw new Error("Choose an approver first");
 
   if (signOff) {
     if (out.status === "COMPLETED" && current.status !== "COMPLETED") {
@@ -116,7 +116,7 @@ export function applySignOff<T extends SignOffUpdate>(
 
   const finalStatus = out.status ?? current.status;
   if (finalStatus === "AWAITING_SIGNOFF") {
-    // explicitly choosing Awaiting sign-off implies the work is done
+    // explicitly choosing Awaiting approval implies the work is done
     const progress = out.status === "AWAITING_SIGNOFF" && out.progress === undefined ? 100 : (out.progress ?? current.progress);
     if (!signOff || progress < 100) out.status = "IN_PROGRESS";
     if (out.status === "AWAITING_SIGNOFF") out.progress = 100;

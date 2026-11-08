@@ -26,7 +26,7 @@ export function FlagFilters({ contacts, streams }: { contacts: Opt[]; streams: O
         {streams.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
       </select>
       <select className={field + " w-auto"} value={sp.get("person") ?? ""} onChange={(e) => set("person", e.target.value)}>
-        <option value="">Any owner / sign-off</option>
+        <option value="">Any owner / approver</option>
         {contacts.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
       </select>
     </div>

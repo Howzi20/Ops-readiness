@@ -153,7 +153,7 @@ export function PriorityCell({ value, onChange, long }: { value: number; onChang
   );
 }
 
-/** Avatar for one role (Owner / Sign-off); click to pick a person. */
+/** Avatar for one role (Owner / Approver); click to pick a person. */
 export function PersonCell({
   value,
   contacts,

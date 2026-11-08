@@ -17,7 +17,7 @@ import { TaskPanel } from "./TaskPanel";
 /** Single-person roles on a task. Collaborators are a separate list. */
 export const PEOPLE = [
   ["ownerId", "Owner"],
-  ["signOffId", "Sign-off"],
+  ["signOffId", "Approver"],
 ] as const;
 
 export function involves(t: TaskRow, contactId: string) {
@@ -103,7 +103,7 @@ export function Board({
         setError(r.error);
         return false;
       }
-      // the server may route the task to Awaiting sign-off: mirror what it saved
+      // the server may route the task to Awaiting approval: mirror what it saved
       setTasks((ts) => ts.map((t) => (t.id === id ? { ...t, status: r.status ?? t.status, progress: r.progress ?? t.progress } : t)));
       return true;
     },

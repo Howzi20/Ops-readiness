@@ -36,13 +36,13 @@ test("(log in if required,) create a site, work a task across views, see it on t
 
   // post an update on the task
   await row().getByTitle("Open task").click();
-  await page.getByLabel("Write an update").fill("Signed off by client today");
+  await page.getByLabel("Write an update").fill("Client confirmed today");
   await page.getByRole("button", { name: "Update", exact: true }).click();
-  await expect(page.getByText("Signed off by client today")).toBeVisible();
+  await expect(page.getByText("Client confirmed today")).toBeVisible();
   await page.getByRole("button", { name: "Close" }).click();
   await expect(row().getByTitle("1 update")).toBeVisible();
 
-  // sign-off: add a person, make them sign-off on another task, complete it, approve it
+  // approval: add a person, make them approver on another task, complete it, approve it
   await page.getByRole("link", { name: "Contacts" }).click();
   await page.getByRole("button", { name: "+ Add contact" }).click();
   await page.locator("input[name=name]").fill("Pat Client");
@@ -52,15 +52,15 @@ test("(log in if required,) create a site, work a task across views, see it on t
   await page.getByRole("link", { name: "Workstreams" }).click();
   await page.getByRole("link", { name: "Onboarding", exact: true }).click();
   const second = page.locator("table").first().locator("tbody tr").nth(1);
-  await second.getByRole("button", { name: "Sign-off" }).click();
+  await second.getByRole("button", { name: "Approver", exact: true }).click();
   await page.getByRole("menuitem", { name: /Pat Client/ }).click();
   await second.getByRole("button", { name: "status" }).click();
   await page.getByRole("menuitem", { name: "Completed" }).click();
-  await expect(second.getByRole("button", { name: "status" })).toHaveText("Awaiting sign-off");
+  await expect(second.getByRole("button", { name: "status" })).toHaveText("Awaiting approval");
   await second.getByTitle("Open task").click();
-  await expect(page.getByText("Waiting for sign-off from")).toBeVisible();
-  await page.getByRole("button", { name: "Approve" }).click();
-  await expect(page.getByText(/Signed off by/)).toBeVisible();
+  await expect(page.getByText("Waiting for approval from")).toBeVisible();
+  await page.getByRole("button", { name: "Approve", exact: true }).click();
+  await expect(page.getByText(/Approved by/)).toBeVisible();
   await page.getByRole("button", { name: "Close" }).click();
   await expect(second.getByRole("button", { name: "status" })).toHaveText("Completed");
 

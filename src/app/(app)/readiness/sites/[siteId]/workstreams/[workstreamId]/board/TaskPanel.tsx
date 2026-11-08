@@ -248,7 +248,7 @@ export function TaskPanel({
                   {PEOPLE.map(([k, role]) => (
                     <div key={k} className="border-r border-line text-center last:border-r-0">
                       <div className="border-b border-line bg-canvas py-1 text-[11px] font-medium text-muted">
-                        {role === "Owner" ? "Owner — manages the task" : "Sign-off — approves completion"}
+                        {role === "Owner" ? "Owner — manages the task" : "Approver — approves completion"}
                       </div>
                       <PersonCell value={task[k]} contacts={contacts} role={role} onChange={(id) => patch({ [k]: id })} />
                       <div className="truncate px-1 pb-1 text-[11px] text-muted">{contacts.find((c) => c.id === task[k])?.name ?? "—"}</div>
@@ -264,7 +264,7 @@ export function TaskPanel({
                   />
                 </div>
                 {!task.signOffId && (
-                  <p className="mt-1 text-xs text-muted">No sign-off person: the owner can mark this task Completed directly.</p>
+                  <p className="mt-1 text-xs text-muted">No approver: the owner can mark this task Completed directly.</p>
                 )}
               </div>
 
@@ -345,7 +345,7 @@ function SignOffBanner({
     return (
       <div className="mt-2 flex items-center gap-2 rounded-md bg-rag-green-soft px-3 py-2 text-sm text-ink">
         <span aria-hidden>✅</span>
-        Signed off by <strong className="font-semibold">{task.signedOffBy}</strong> on{" "}
+        Approved by <strong className="font-semibold">{task.signedOffBy}</strong> on{" "}
         {new Date(task.signedOffAt).toLocaleDateString("en-AU", { day: "2-digit", month: "short", year: "numeric" })}
       </div>
     );
@@ -356,7 +356,7 @@ function SignOffBanner({
     <div className="mt-2 rounded-md border border-[#7b5cc4]/40 bg-[#f3effb] px-3 py-2.5 text-sm">
       <div className="flex flex-wrap items-center gap-2">
         <span className="text-ink">
-          Waiting for sign-off from <strong className="font-semibold">{signer?.name ?? "the sign-off person"}</strong>
+          Waiting for approval from <strong className="font-semibold">{signer?.name ?? "the approver"}</strong>
         </span>
         {!returning && (
           <span className="ml-auto flex gap-2">
@@ -369,7 +369,7 @@ function SignOffBanner({
                 const r = await approveSignOff(task.id, name);
                 setBusy(false);
                 if (!r.ok) return setError(r.error);
-                onApproved({ id: "local-" + Date.now(), authorName: name, body: "✅ Signed off — task completed.", createdAt: now() }, r.signedOffAt ?? now());
+                onApproved({ id: "local-" + Date.now(), authorName: name, body: "✅ Approved — task completed.", createdAt: now() }, r.signedOffAt ?? now());
               }}
             >
               Approve
@@ -410,7 +410,7 @@ function SignOffBanner({
           </div>
         </div>
       )}
-      <p className="mt-1 text-xs text-muted">Signing as {name}</p>
+      <p className="mt-1 text-xs text-muted">Approving as {name}</p>
     </div>
   );
 }

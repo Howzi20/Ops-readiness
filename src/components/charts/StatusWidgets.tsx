@@ -141,11 +141,11 @@ export function AwaitingSignOff({
   return (
     <Card className="p-4">
       <h3 className="text-sm font-semibold text-ink">
-        Awaiting sign-off <span className="ml-1 rounded-full px-2 text-xs text-white tabular" style={{ background: STATUS_COLOR.AWAITING_SIGNOFF.bg }}>{tasks.length}</span>
+        Awaiting approval <span className="ml-1 rounded-full px-2 text-xs text-white tabular" style={{ background: STATUS_COLOR.AWAITING_SIGNOFF.bg }}>{tasks.length}</span>
       </h3>
       <p className="text-xs text-muted">Finished by the owner, waiting for approval</p>
       {tasks.length === 0 ? (
-        <p className="py-6 text-center text-sm text-muted">Nothing waiting for sign-off.</p>
+        <p className="py-6 text-center text-sm text-muted">Nothing waiting for approval.</p>
       ) : (
         <ul className="mt-2 max-h-80 divide-y divide-line overflow-y-auto">
           {tasks.map((t) => (
@@ -153,7 +153,7 @@ export function AwaitingSignOff({
               {t.signOff ? <Avatar initials={t.signOff.initials} name={t.signOff.name} size={22} /> : <span className="w-[22px]" />}
               <span className="min-w-0 flex-1">
                 <Link href={`/readiness/sites/${siteId}/workstreams/${t.workstream.id}?task=${t.id}`} className="line-clamp-1 text-ink hover:text-accent">{t.title}</Link>
-                <span className="text-xs text-muted">{t.workstream.code} {t.workstream.name} · {t.signOff ? `with ${t.signOff.name}` : "no sign-off person"}</span>
+                <span className="text-xs text-muted">{t.workstream.code} {t.workstream.name} · {t.signOff ? `with ${t.signOff.name}` : "no approver"}</span>
               </span>
             </li>
           ))}

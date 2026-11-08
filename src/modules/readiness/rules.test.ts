@@ -98,28 +98,28 @@ describe("daysUntil", () => {
 describe("applySignOff", () => {
   const cur = { status: "IN_PROGRESS", progress: 60, signOffId: "so1" };
 
-  it("routes Completed to Awaiting sign-off when a sign-off person is set", () => {
+  it("routes Completed to Awaiting approval when an approver is set", () => {
     expect(applySignOff({ status: "COMPLETED" }, cur)).toMatchObject({ status: "AWAITING_SIGNOFF", progress: 100 });
   });
-  it("routes progress 100 to Awaiting sign-off when a sign-off person is set", () => {
+  it("routes progress 100 to Awaiting approval when an approver is set", () => {
     expect(applySignOff({ progress: 100 }, cur)).toMatchObject({ status: "AWAITING_SIGNOFF", progress: 100 });
   });
-  it("completes directly when there is no sign-off person", () => {
+  it("completes directly when there is no approver", () => {
     expect(applySignOff({ status: "COMPLETED" }, { ...cur, signOffId: null })).toMatchObject({ status: "COMPLETED" });
     expect(applySignOff({ progress: 100 }, { ...cur, signOffId: null }).status).toBeUndefined();
   });
-  it("uses a sign-off person set in the same edit", () => {
+  it("uses an approver set in the same edit", () => {
     expect(applySignOff({ status: "COMPLETED", signOffId: "x" }, { ...cur, signOffId: null })).toMatchObject({ status: "AWAITING_SIGNOFF" });
   });
-  it("refuses Awaiting sign-off without a sign-off person", () => {
-    expect(() => applySignOff({ status: "AWAITING_SIGNOFF" }, { ...cur, signOffId: null })).toThrow(/sign-off person/i);
+  it("refuses Awaiting approval without an approver", () => {
+    expect(() => applySignOff({ status: "AWAITING_SIGNOFF" }, { ...cur, signOffId: null })).toThrow(/approver/i);
   });
-  it("sends an awaiting task back to In Progress when progress drops or the sign-off person is removed", () => {
+  it("sends an awaiting task back to In Progress when progress drops or the approver is removed", () => {
     const waiting = { status: "AWAITING_SIGNOFF", progress: 100, signOffId: "so1" };
     expect(applySignOff({ progress: 80 }, waiting)).toMatchObject({ status: "IN_PROGRESS" });
     expect(applySignOff({ signOffId: null }, waiting)).toMatchObject({ status: "IN_PROGRESS" });
   });
-  it("clears the sign-off record when a completed task is reopened", () => {
+  it("clears the approval record when a completed task is reopened", () => {
     const done = { status: "COMPLETED", progress: 100, signOffId: "so1" };
     expect(applySignOff({ status: "IN_PROGRESS" }, done)).toMatchObject({ signedOffAt: null, signedOffBy: "" });
   });
