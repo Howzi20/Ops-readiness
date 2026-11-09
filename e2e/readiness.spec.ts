@@ -58,9 +58,11 @@ test("(log in if required,) create a site, work a task across views, see it on t
   await page.getByRole("link", { name: "Workstreams" }).click();
   await page.getByRole("link", { name: "Onboarding", exact: true }).click();
   await expect(page.getByText(/Approver:\s*Pat Client/)).toBeVisible();
+  // …open tasks in the workstream now have Pat as approver; the task completed earlier keeps its record
+  const first = page.locator("table").first().locator("tbody tr").first();
   const second = page.locator("table").first().locator("tbody tr").nth(1);
-  await second.getByRole("button", { name: "Approver", exact: true }).click();
-  await page.getByRole("menuitem", { name: /Pat Client/ }).click();
+  await expect(second.getByRole("button", { name: "Approver", exact: true })).toHaveAttribute("title", "Approver: Pat Client");
+  await expect(first.getByRole("button", { name: "Approver", exact: true })).toHaveAttribute("title", "Assign Approver");
   await second.getByRole("button", { name: "status" }).click();
   await page.getByRole("menuitem", { name: "Completed" }).click();
   await expect(second.getByRole("button", { name: "status" })).toHaveText("Awaiting approval");

@@ -8,6 +8,7 @@ import { parseDateInput } from "@/lib/dates";
 import { DOCUMENTED, FLAGS, ORGANISATIONS, PHASES, RISK_LEVELS, RISK_STATUSES, STATUSES } from "./constants";
 import { applySignOff, normaliseTaskUpdate } from "./rules";
 import { approveTask, notifyApprover, returnTask } from "./approval";
+import { applyWorkstreamPeople } from "./allocation";
 import { createSiteFromTemplate, duplicateTemplate, renumberTemplateWorkstreams, renumberWorkstreams, saveSiteAsTemplate } from "./templates";
 
 export type ActionResult = { ok: true } | { ok: false; error: string };
@@ -199,7 +200,10 @@ export async function addTask(workstreamId: string, section: string, title: stri
     const lastInSection = await db.task.findFirst({ where: { workstreamId, section }, orderBy: { sortOrder: "desc" } });
     const sortOrder = lastInSection ? lastInSection.sortOrder + 1 : (max._max.sortOrder ?? -1) + 1;
     await db.task.updateMany({ where: { workstreamId, sortOrder: { gte: sortOrder } }, data: { sortOrder: { increment: 1 } } });
-    await db.task.create({ data: { workstreamId, section: section.trim(), title: title.trim(), sortOrder } });
+    // new tasks start with the workstream's owner and approver
+    await db.task.create({
+      data: { workstreamId, section: section.trim(), title: title.trim(), sortOrder, ownerId: ws.ownerId, signOffId: ws.approverId },
+    });
     revalidatePath(sitePath(ws.siteId), "layout");
     return { ok: true };
   } catch (e) {
@@ -246,8 +250,29 @@ export async function setWorkstreamPerson(
       throw new Error("Unknown contact");
     }
     const ws = await db.workstream.update({ where: { id: workstreamId }, data: { [role]: contactId || null } });
+    // the workstream's people flow down to its open tasks
+    const r = await applyWorkstreamPeople(db, workstreamId, role === "ownerId" ? { ownerId: contactId || null } : { approverId: contactId || null });
+    for (const taskId of r.newlyAwaitingApprover) await notifyApprover(taskId).catch((e) => console.error("Approval email failed", e));
     revalidatePath(sitePath(ws.siteId), "layout");
     return { ok: true };
+  } catch (e) {
+    return fail(e);
+  }
+}
+
+/** Copy every workstream's Owner and Approver onto its open tasks (button on the Contacts tab). */
+export async function applyAllocationToTasks(siteId: string): Promise<ActionResult & { updated?: number }> {
+  try {
+    await requireUser();
+    const streams = await db.workstream.findMany({ where: { siteId } });
+    let updated = 0;
+    for (const ws of streams) {
+      updated += await db.task.count({ where: { workstreamId: ws.id, status: { notIn: ["COMPLETED", "NA"] } } });
+      const r = await applyWorkstreamPeople(db, ws.id, { ownerId: ws.ownerId, approverId: ws.approverId });
+      for (const taskId of r.newlyAwaitingApprover) await notifyApprover(taskId).catch((e) => console.error("Approval email failed", e));
+    }
+    revalidatePath(sitePath(siteId), "layout");
+    return { ok: true, updated };
   } catch (e) {
     return fail(e);
   }

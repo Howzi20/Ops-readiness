@@ -3,6 +3,7 @@ import { rmSync } from "node:fs";
 import { PrismaClient } from "@prisma/client";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { createSiteFromTemplate, renumberWorkstreams, saveSiteAsTemplate } from "./templates";
+import { applyWorkstreamPeople } from "./allocation";
 
 const url = "file:./test-templates.db";
 let db: PrismaClient;
@@ -82,5 +83,35 @@ describe("template copying", () => {
   it("creates an empty site when no template is chosen", async () => {
     const site = await createSiteFromTemplate(db, { name: "Blank", templateId: null });
     expect(await db.workstream.count({ where: { siteId: site.id } })).toBe(0);
+  });
+});
+
+describe("workstream owner / approver flow to tasks", () => {
+  it("overwrites open tasks, keeps closed ones, and reports tasks that need a new approval email", async () => {
+    const site = await createSiteFromTemplate(db, { name: "Alloc", templateId: null });
+    const [a, b] = await Promise.all([
+      db.contact.create({ data: { siteId: site.id, name: "Ann", initials: "AN" } }),
+      db.contact.create({ data: { siteId: site.id, name: "Bob", initials: "BO" } }),
+    ]);
+    const ws = await db.workstream.create({ data: { siteId: site.id, code: "1", name: "WS", sortOrder: 0 } });
+    const mk = (title: string, status: string, signOffId: string | null = null) =>
+      db.task.create({ data: { workstreamId: ws.id, title, sortOrder: 0, status, signOffId, progress: status === "AWAITING_SIGNOFF" ? 100 : 0 } });
+    const open = await mk("open", "IN_PROGRESS");
+    const waiting = await mk("waiting", "AWAITING_SIGNOFF", a.id);
+    const done = await mk("done", "COMPLETED", a.id);
+    const na = await mk("na", "NA");
+
+    const r = await applyWorkstreamPeople(db, ws.id, { approverId: b.id, ownerId: a.id });
+    const get = (id: string) => db.task.findUniqueOrThrow({ where: { id } });
+    expect((await get(open.id)).signOffId).toBe(b.id);
+    expect((await get(open.id)).ownerId).toBe(a.id);
+    expect((await get(waiting.id)).signOffId).toBe(b.id);
+    expect((await get(done.id)).signOffId).toBe(a.id); // closed tasks keep their history
+    expect((await get(na.id)).signOffId).toBeNull();
+    expect(r.newlyAwaitingApprover).toEqual([waiting.id]); // re-notify the new approver
+
+    // removing the approver sends waiting tasks back to In Progress
+    await applyWorkstreamPeople(db, ws.id, { approverId: null });
+    expect(await get(waiting.id)).toMatchObject({ signOffId: null, status: "IN_PROGRESS" });
   });
 });

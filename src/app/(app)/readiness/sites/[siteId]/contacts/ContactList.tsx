@@ -1,6 +1,6 @@
 "use client";
 import { useActionState, useEffect, useState } from "react";
-import { deleteContact, saveContact } from "@/modules/readiness/actions";
+import { applyAllocationToTasks, deleteContact, saveContact } from "@/modules/readiness/actions";
 import { ORGANISATIONS, ORG_LABEL } from "@/modules/readiness/constants";
 import { btn, Card, Empty, input, label } from "@/components/ui";
 import { PersonSelect } from "../workstreams/WorkstreamControls";
@@ -18,7 +18,7 @@ export function ContactList({ siteId, contacts, allocation }: { siteId: string; 
         <button className={btn.primary} onClick={() => setEditing("new")}>+ Add contact</button>
       </div>
       {contacts.length === 0 && <Empty>No contacts yet.</Empty>}
-      {contacts.length > 0 && <AllocationTable allocation={allocation} contacts={contacts} />}
+      {contacts.length > 0 && <AllocationTable siteId={siteId} allocation={allocation} contacts={contacts} />}
       {ORGANISATIONS.map((org) => {
         const list = contacts.filter((c) => c.organisation === org);
         if (!list.length) return null;
@@ -134,12 +134,32 @@ function Allocated({ allocation, contactId }: { allocation: Allocation; contactI
 }
 
 /** Allocate an owner and an approver to every workstream from one place. */
-function AllocationTable({ allocation, contacts }: { allocation: Allocation; contacts: Contact[] }) {
+function AllocationTable({ siteId, allocation, contacts }: { siteId: string; allocation: Allocation; contacts: Contact[] }) {
   const options = contacts.map((c) => ({ id: c.id, label: `${c.initials} — ${c.name}` }));
+  const [applying, setApplying] = useState(false);
+  const [note, setNote] = useState<string | null>(null);
   return (
     <section>
       <h2 className="mb-1 text-sm font-semibold uppercase tracking-wide text-muted">Workstream allocation</h2>
-      <p className="mb-2 text-sm text-muted">Who manages (Owner) and who approves (Approver) each workstream.</p>
+      <div className="mb-2 flex flex-wrap items-center gap-3">
+        <p className="text-sm text-muted">
+          Who manages (Owner) and who approves (Approver) each workstream. Changing one updates all open tasks in that workstream.
+        </p>
+        <button
+          className={btn.secondary + " ml-auto"}
+          disabled={applying}
+          onClick={async () => {
+            if (!confirm("Set the Owner and Approver of every open task to its workstream's Owner and Approver? Completed and N/A tasks are left as they are.")) return;
+            setApplying(true);
+            const r = await applyAllocationToTasks(siteId);
+            setApplying(false);
+            setNote(r.ok ? `Updated ${r.updated} open tasks.` : r.error);
+          }}
+        >
+          {applying ? "Applying…" : "Apply to tasks"}
+        </button>
+      </div>
+      {note && <p className="mb-2 text-sm text-ink">{note}</p>}
       {allocation.length === 0 ? (
         <Empty>This site has no workstreams yet.</Empty>
       ) : (

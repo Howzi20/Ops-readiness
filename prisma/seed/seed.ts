@@ -94,13 +94,16 @@ async function seedDemoSite(templateId: string) {
     const owner = byInit[owners[ws.name]];
     // client-facing workstreams are approved by the client; the rest by the GM
     const clientApproves = ["Onboarding", "Tenant Onboarding", "Transition", "Post Transition"].includes(ws.name);
-    await db.workstream.update({ where: { id: ws.id }, data: { ownerId: owner, approverId: clientApproves ? byInit.RP : byInit.PS } });
+    const approverId = clientApproves ? byInit.RP : byInit.PS;
+    const approverName = clientApproves ? "Robin Patel" : "Priya Shah";
+    await db.workstream.update({ where: { id: ws.id }, data: { ownerId: owner, approverId } });
     for (const t of ws.tasks) {
       n++;
       const r = (n * 37) % 100;
       const post = t.phase === "POST_PC";
       // priority-1 tasks need client sign-off in the demo; others complete on the owner's say-so
-      const signOffId = t.priority === 1 ? byInit.RP : null;
+      // tasks take their workstream's owner and approver
+      const signOffId = approverId;
       let data: Record<string, unknown> = { ownerId: owner, signOffId };
       const span = 7 + (n % 4) * 7; // 1–4 week duration for tasks that get a start date
       if (post) data = { ...data, targetDate: addDays(70 + (n % 40)) };
@@ -113,13 +116,14 @@ async function seedDemoSite(templateId: string) {
           startDate: addDays(end - span),
           targetDate: addDays(end),
           documented: "YES",
-          ...(signOffId ? { signedOffAt: addDays(end), signedOffBy: "Robin Patel" } : {}),
+          signedOffAt: addDays(end),
+          signedOffBy: approverName,
         };
       } else if (r < 60) data = { ...data, status: "NA" };
       else if (r < 66) {
         const end = -(n % 10) - 1;
         data = { ...data, status: "DELAYED", progress: 30, startDate: addDays(end - span), targetDate: addDays(end) };
-      } else if (r < 70 && signOffId) {
+      } else if (r < 70) {
         const end = (n % 10) - 5;
         data = { ...data, status: "AWAITING_SIGNOFF", progress: 100, startDate: addDays(end - span), targetDate: addDays(end) };
       } else if (r < 82) {
