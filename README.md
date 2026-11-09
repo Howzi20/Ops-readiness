@@ -18,6 +18,14 @@ npm run setup             # creates the local database and loads the template + 
 npm run dev
 ```
 
+### Getting updates
+
+```bash
+npm run go        # pull the latest version, install anything new, update the database, start the app
+```
+
+`npm run update` does the same without starting the app.
+
 Open **http://localhost:3200**. You go straight into the app with no login (prototype mode).
 
 ### Turning logins on
