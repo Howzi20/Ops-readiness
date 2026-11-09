@@ -134,3 +134,22 @@ export async function renumberTemplateWorkstreams(db: Tx, templateId: string) {
   const list = await db.templateWorkstream.findMany({ where: { templateId }, orderBy: [{ sortOrder: "asc" }, { code: "asc" }], select: { id: true } });
   for (const [i, w] of list.entries()) await db.templateWorkstream.update({ where: { id: w.id }, data: { sortOrder: i, code: String(i + 1) } });
 }
+
+/** True when codes already read 1, 2, 3… in order. */
+function inOrder(list: { code: string }[]) {
+  return list.every((w, i) => w.code === String(i + 1));
+}
+
+/**
+ * Self-repair for databases created before workstreams were numbered 1, 2, 3…
+ * Cheap read on every call; only writes when something is out of order.
+ */
+export async function ensureSiteNumbering(db: Tx, siteId: string) {
+  const list = await db.workstream.findMany({ where: { siteId }, orderBy: [{ sortOrder: "asc" }, { code: "asc" }], select: { code: true } });
+  if (!inOrder(list)) await renumberWorkstreams(db, siteId);
+}
+
+export async function ensureTemplateNumbering(db: Tx, templateId: string) {
+  const list = await db.templateWorkstream.findMany({ where: { templateId }, orderBy: [{ sortOrder: "asc" }, { code: "asc" }], select: { code: true } });
+  if (!inOrder(list)) await renumberTemplateWorkstreams(db, templateId);
+}

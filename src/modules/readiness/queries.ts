@@ -3,12 +3,14 @@ import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
 import { toDateInput } from "@/lib/dates";
 import { completion, computeFlag, daysUntil, workstreamSummary } from "./rules";
+import { ensureSiteNumbering } from "./templates";
 import type { Flag } from "./constants";
 
 const flagFields = { status: true, progress: true, targetDate: true, flagOverride: true } as const;
 
 export async function getSitesOverview() {
   const today = new Date();
+  for (const { id } of await db.site.findMany({ select: { id: true } })) await ensureSiteNumbering(db, id);
   const sites = await db.site.findMany({
     orderBy: { createdAt: "desc" },
     include: { template: { select: { name: true } }, workstreams: { include: { tasks: { select: flagFields } } } },
@@ -31,6 +33,9 @@ export async function getSitesOverview() {
 export async function getSite(siteId: string) {
   const site = await db.site.findUnique({ where: { id: siteId }, include: { template: { select: { name: true } } } });
   if (!site) notFound();
+  // repair data saved by older versions of the app (only writes when needed)
+  await ensureSiteNumbering(db, siteId);
+  await db.contact.updateMany({ where: { siteId, organisation: "JLL" }, data: { organisation: "TEAM" } });
   return site;
 }
 

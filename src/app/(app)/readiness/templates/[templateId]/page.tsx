@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
 import { PageHeader } from "@/components/ui";
 import { TemplateEditor } from "./TemplateEditor";
+import { ensureTemplateNumbering } from "@/modules/readiness/templates";
 
 export default async function TemplatePage({
   params,
@@ -12,6 +13,7 @@ export default async function TemplatePage({
 }) {
   const { templateId } = await params;
   const { ws } = await searchParams;
+  await ensureTemplateNumbering(db, templateId);
   const t = await db.template.findUnique({
     where: { id: templateId },
     include: {
