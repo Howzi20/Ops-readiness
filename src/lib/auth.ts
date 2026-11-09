@@ -15,7 +15,10 @@ export async function getSession() {
 /** Use in server components / actions that require a logged-in user. */
 export async function requireUser() {
   if (!loginRequired()) {
-    // prototype mode: everyone acts as one shared user, no password needed
+    // prototype mode: everyone acts as one shared user, no password needed.
+    // Read first so ordinary page loads never write to the database.
+    const existing = await db.user.findUnique({ where: { email: PROTOTYPE_EMAIL } });
+    if (existing) return existing;
     return db.user.upsert({
       where: { email: PROTOTYPE_EMAIL },
       update: {},
