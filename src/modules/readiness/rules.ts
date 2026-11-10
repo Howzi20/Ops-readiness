@@ -128,3 +128,18 @@ export function applySignOff<T extends SignOffUpdate>(
   }
   return out;
 }
+
+export type GroupHealth = "COMPLETE" | "OVERDUE" | "AWAITING" | "DUE_SOON" | "NOT_STARTED" | "ON_TRACK" | "EMPTY";
+
+/** One-word health of a group of tasks, most urgent first. */
+export function groupHealth(tasks: FlagInput[], today = new Date()): GroupHealth {
+  const active = tasks.filter((t) => t.status !== "NA");
+  if (active.length === 0) return "EMPTY";
+  if (active.every((t) => t.status === "COMPLETED")) return "COMPLETE";
+  const open = active.filter((t) => t.status !== "COMPLETED");
+  if (open.some((t) => (daysUntil(t.targetDate, today) ?? 0) < 0)) return "OVERDUE";
+  if (open.some((t) => t.status === "AWAITING_SIGNOFF")) return "AWAITING";
+  if (open.some((t) => computeFlag({ ...t, flagOverride: null }, today) === "YELLOW")) return "DUE_SOON";
+  if (active.every((t) => t.status === "TO_COMMENCE" && t.progress === 0)) return "NOT_STARTED";
+  return "ON_TRACK";
+}

@@ -18,6 +18,9 @@ test("(log in if required,) create a site, work a task across views, see it on t
 
   // open the Onboarding workstream and make the first task overdue
   await page.getByRole("link", { name: /Onboarding/ }).first().click();
+  // groups show as progress-ring tiles; open the first one to see its tasks
+  await expect(page.getByRole("button", { name: /^General Transition Activity: 0% complete/ })).toBeVisible();
+  await page.getByRole("button", { name: /^General Transition Activity:/ }).click();
   const row = () => page.locator("table").first().locator("tbody tr").first();
   await row().getByLabel("target date").fill("2020-01-01");
   await expect(row().locator('[title^="Red"]')).toBeVisible();

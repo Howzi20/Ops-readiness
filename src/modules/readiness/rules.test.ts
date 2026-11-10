@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { applySignOff, completion, computeFlag, daysUntil, normaliseTaskUpdate, workstreamSummary } from "./rules";
+import { applySignOff, completion, computeFlag, daysUntil, groupHealth, normaliseTaskUpdate, workstreamSummary } from "./rules";
 
 const today = new Date("2026-11-07T09:00:00");
 const d = (s: string) => new Date(`${s}T00:00:00`);
@@ -125,5 +125,18 @@ describe("applySignOff", () => {
   });
   it("leaves unrelated edits alone", () => {
     expect(applySignOff({ priority: 1 } as never, cur)).toEqual({ priority: 1 });
+  });
+});
+
+describe("groupHealth", () => {
+  const t = (status: string, target: string | null = null, progress = 0) => ({ status, progress, targetDate: target ? d(target) : null, flagOverride: null });
+  it("reports the most urgent state", () => {
+    expect(groupHealth([t("COMPLETED"), t("NA")], today)).toBe("COMPLETE");
+    expect(groupHealth([t("IN_PROGRESS", "2026-11-01", 50), t("AWAITING_SIGNOFF", null, 100)], today)).toBe("OVERDUE");
+    expect(groupHealth([t("AWAITING_SIGNOFF", null, 100), t("IN_PROGRESS", "2026-11-10", 10)], today)).toBe("AWAITING");
+    expect(groupHealth([t("IN_PROGRESS", "2026-11-10", 10), t("COMPLETED")], today)).toBe("DUE_SOON");
+    expect(groupHealth([t("TO_COMMENCE"), t("TO_COMMENCE", "2026-12-30")], today)).toBe("NOT_STARTED");
+    expect(groupHealth([t("IN_PROGRESS", "2026-12-30", 30)], today)).toBe("ON_TRACK");
+    expect(groupHealth([t("NA")], today)).toBe("EMPTY");
   });
 });
